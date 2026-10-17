@@ -1208,6 +1208,179 @@ h1,h2,h3,h4,p{margin:0}
 .placeholder .ph-ic .i{width:30px;height:30px}
 .ph{background:var(--canvas-soft)}
 .ph.err{background:var(--canvas-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a8b6c7' stroke-width='1.5'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpolyline points='21 15 16 10 5 21'/%3E%3C/svg%3E") center/50% no-repeat}
+/* =========================================================
+   30. AI LAB — Studio (S13) · Nguồn hàng (S14) · Radar giá (S15) · Đăng từ 1 ảnh (S6)
+   ========================================================= */
+.card-h h3 .i{width:16px;height:16px;color:var(--primary);vertical-align:-3px;margin-right:6px;display:inline-block}
+.lab-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.lab-i{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--primary-subdued);border-radius:var(--r-lg);background:linear-gradient(180deg,#f8f7fd,#fff);text-align:left;min-width:0}
+.lab-i:hover{border-color:var(--primary)}
+.lab-i .grow{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;font-size:12px;color:var(--ink-mute);line-height:1.4}
+.lab-i b{font-size:13px;color:var(--ink)}
+.lab-i > .i{width:15px;height:15px;color:var(--ink-mute);flex:none}
+@media (max-width:1199px){.lab-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:767px){.lab-grid{grid-template-columns:minmax(0,1fr)}}
+.ai-note{font-size:12.5px}
+.soft-card{background:var(--canvas-soft);border-color:transparent}
+.how{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px;font-size:12.5px;color:var(--ink-2);line-height:1.5}
+.thumb.lg{width:64px;height:64px;border-radius:10px}
+.spin{width:18px;height:18px;border-radius:50%;border:2.5px solid var(--primary-subdued);border-top-color:var(--primary);animation:spin .8s linear infinite;flex:none}
+#stTabs button{display:inline-flex;align-items:center;gap:6px;height:32px}
+#stTabs .i{width:14px;height:14px}
+
+.st-pick{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.st-pick::-webkit-scrollbar{display:none}
+.st-p{flex:0 0 132px;display:flex;align-items:center;gap:8px;padding:6px 10px 6px 6px;border:1.5px solid var(--hairline);border-radius:var(--r-lg);background:var(--canvas);font-size:12.5px;font-weight:700;text-align:left}
+.st-p.active{border-color:var(--primary);background:var(--primary-tint)}
+.st-grid{align-items:start}
+.scenes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:1279px){.scenes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.scene{display:flex;flex-direction:column;gap:8px;min-width:0}
+.scenes.fresh .scene{animation:pop .35s ease-out both;animation-delay:var(--d)}
+.sc-art{position:relative;aspect-ratio:5/6;border-radius:var(--r-lg);overflow:hidden;background:linear-gradient(160deg,#ece5da,#d9d2c6)}
+.sc-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sc-prod{position:absolute;width:42%;aspect-ratio:1/1;margin:-42% 0 0 -21%;border-radius:50%;overflow:hidden;mix-blend-mode:multiply;filter:contrast(1.06);
+  -webkit-mask-image:radial-gradient(circle,#000 56%,transparent 71%);mask-image:radial-gradient(circle,#000 56%,transparent 71%)}
+.sc-prod img{width:100%;height:100%;object-fit:cover}
+.sc-prod.light{mix-blend-mode:normal;filter:drop-shadow(0 8px 10px rgba(0,0,0,.18));-webkit-mask-image:radial-gradient(circle,#000 44%,transparent 64%);mask-image:radial-gradient(circle,#000 44%,transparent 64%)}
+.sc-lbl{position:absolute;left:8px;bottom:8px;display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:var(--r-pill);background:rgba(13,37,61,.78);color:#fff;font-size:10px;font-weight:800;z-index:2}
+.sc-lbl .i{width:11px;height:11px}
+.sc-shimmer{position:absolute;inset:0;z-index:3;background:linear-gradient(110deg,#ece9f7 30%,#f8f7fd 50%,#ece9f7 70%);background-size:200% 100%;animation:shimmer 1.1s linear infinite;opacity:0;pointer-events:none;transition:opacity .3s}
+.scene.busy .sc-shimmer{opacity:1}
+@keyframes shimmer{to{background-position:-200% 0}}
+.sc-b{display:flex;flex-direction:column;gap:3px;font-size:12.5px;min-width:0}
+.sc-ad{display:inline-flex;align-items:center;gap:4px;align-self:flex-start;padding:2px 8px;border-radius:var(--r-pill);background:var(--primary-tint);color:var(--primary-deep);font-size:11px;font-weight:700}
+.sc-ad .i{width:11px;height:11px}
+.st-keep{display:flex;gap:8px;align-items:center;margin-top:12px;font-size:12.5px;color:var(--success);font-weight:700}
+.st-keep .i{width:16px;height:16px}
+.st-empty{display:flex;gap:14px;align-items:center;padding:20px;border:1.5px dashed var(--hairline);border-radius:var(--r-lg)}
+.st-empty p{margin-top:4px;max-width:420px}
+.fid{padding:7px 0;border-bottom:1px solid var(--hairline);width:100%}
+.fid input{width:16px;height:16px;accent-color:var(--primary)}
+#stFid{display:flex;flex-direction:column}
+
+.vid-wrap{display:grid;grid-template-columns:240px minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:767px){.vid-wrap{grid-template-columns:minmax(0,1fr)}.vid{max-width:260px;margin:0 auto}}
+.vid{position:relative;aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#1d2040;box-shadow:var(--shadow-2)}
+.vf{position:absolute;inset:0;opacity:0}
+.vf img{width:100%;height:100%;object-fit:cover}
+.vid:not(.play) .vf:first-child{opacity:.55}
+.vid.play .vf{animation:kb calc(var(--n) * 4s) infinite;animation-delay:calc(var(--i) * 4s)}
+@keyframes kb{0%{opacity:0;transform:scale(1.18) translateX(4%)}6%{opacity:1}30%{opacity:1}36%{opacity:0;transform:scale(1) translateX(-3%)}100%{opacity:0}}
+.v-sub{position:absolute;left:12px;right:12px;bottom:36px;padding:8px 10px;border-radius:10px;background:rgba(0,0,0,.55);color:#fff;font-size:12.5px;font-weight:700;line-height:1.4;text-align:center;z-index:2}
+.v-sub.in{animation:pop .3s ease-out}
+.vid .sc-lbl{top:10px;bottom:auto;left:10px}
+.v-bar{position:absolute;left:12px;right:12px;bottom:16px;height:3px;border-radius:2px;background:rgba(255,255,255,.25);overflow:hidden;z-index:2}
+.v-bar i{display:block;height:100%;width:0;background:#fff}
+.vid.play .v-bar i{animation:vbar 9.6s linear infinite}
+@keyframes vbar{to{width:100%}}
+.v-busy{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:rgba(29,32,64,.72);color:#fff;font-size:12.5px;font-weight:700}
+.vid-side{display:flex;flex-direction:column;gap:14px;min-width:0}
+.seg-col{flex-direction:column;border-radius:var(--r-lg);align-self:stretch}
+.seg-col button{height:32px;border-radius:10px;text-align:left;padding:0 12px}
+.script{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.script li{display:grid;grid-template-columns:52px 1fr;gap:8px;font-size:12.5px;color:var(--ink-2);padding:7px 10px;border-radius:8px;background:var(--canvas-soft)}
+.script .tnum{font-weight:800;color:var(--primary-deep);font-size:11.5px}
+.ab{display:flex;flex-direction:column;gap:8px;margin-top:16px;padding-top:14px;border-top:1px solid var(--hairline)}
+.ab-r{display:flex;align-items:center;gap:10px;font-size:12.5px}
+.ab-r .grow{flex:1;min-width:0}
+
+.trends{display:flex;flex-direction:column;gap:6px}
+.trend{display:flex;align-items:center;gap:10px;padding:8px;border:1px solid var(--hairline);border-radius:var(--r-lg);background:var(--canvas);text-align:left}
+.trend:hover{border-color:var(--primary-subdued)}
+.trend .grow{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;font-size:13px}
+.tr-g{display:inline-flex;align-items:center;gap:3px;font-size:11.5px;font-weight:800;color:var(--success)}
+.tr-g .i{width:12px;height:12px}
+.trend .link-btn{font-size:12px;display:inline-flex;align-items:center;gap:2px;white-space:nowrap}
+.trend .link-btn .i{width:13px;height:13px}
+.src-drop{display:flex;flex-direction:column;gap:12px}
+.drop{display:flex;flex-direction:column;align-items:center;gap:4px;padding:20px;border:1.5px dashed var(--primary-subdued);border-radius:var(--r-lg);background:var(--primary-tint);cursor:pointer;text-align:center;font-size:13px}
+.drop > .i{width:26px;height:26px;color:var(--primary)}
+.src-samples{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.src-samples .thumb{border:2px solid transparent;padding:0;cursor:pointer}
+.src-samples .thumb.on,.src-samples .thumb:hover{border-color:var(--primary)}
+.src-q{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.src-q .grow{display:flex;flex-direction:column;gap:2px}
+.src-q .thumb img{width:100%;height:100%;object-fit:cover}
+.src-wait{display:flex;align-items:center;gap:10px;padding:18px 4px;font-size:13px;font-weight:700;color:var(--ink-2)}
+.sp-list{display:flex;flex-direction:column;gap:8px}
+.sp-row{display:grid;grid-template-columns:minmax(0,2.2fr) repeat(3,minmax(0,1fr)) 72px;gap:12px;align-items:center;padding:12px;border:1.5px solid var(--hairline);border-radius:var(--r-lg);background:var(--canvas);text-align:left;width:100%}
+.sp-row:hover{border-color:#c7d2de}
+.sp-row.on{border-color:var(--primary);background:var(--primary-tint)}
+.sp-main{display:flex;flex-direction:column;gap:4px;min-width:0}
+.sp-main b{font-size:13.5px}
+.sp-main .caption{display:inline-flex;align-items:center;gap:4px}
+.sp-main .caption .i{width:12px;height:12px}
+.sp-plat{font-size:10.5px;font-weight:800;letter-spacing:.4px;color:var(--ink-mute);text-transform:uppercase}
+.sp-tags{display:flex;gap:4px;flex-wrap:wrap}
+.sp-k{display:flex;flex-direction:column;gap:1px;font-size:13px;min-width:0}
+.sp-score{display:flex;flex-direction:column;align-items:center;gap:4px}
+.ring{--p:50;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--primary) calc(var(--p) * 1%),var(--hairline) 0)}
+.ring b{width:34px;height:34px;border-radius:50%;background:var(--canvas);display:grid;place-items:center;font-size:12.5px}
+@media (max-width:899px){.sp-row{grid-template-columns:repeat(3,minmax(0,1fr)) 56px}.sp-main{grid-column:1/-1}}
+.hs{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--r-md);background:var(--canvas-soft);margin:12px 0}
+.hs > .i{color:var(--primary);width:16px;height:16px;flex:none}
+.hs div{flex:1;display:flex;flex-direction:column;font-size:13px}
+.lc{display:flex;flex-direction:column}
+.lc-r{display:flex;justify-content:space-between;padding:7px 2px;border-bottom:1px dashed var(--hairline);font-size:13px;color:var(--ink-2)}
+.lc-r.tot{border-bottom:0;font-size:14px;color:var(--ink);font-weight:800}
+.lc-out{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.lc-out > div{display:flex;flex-direction:column;gap:2px;padding:10px 12px;border-radius:var(--r-md);background:var(--primary-tint)}
+.lc-out b{font-size:17px;font-family:var(--font-display)}
+#srcRfq{display:flex;flex-direction:column;gap:12px}
+#srcRfq .card-h{margin-bottom:0}
+.rfq-msg{padding:12px;border-radius:var(--r-md);background:var(--canvas-soft);font-size:12.5px;line-height:1.6;white-space:pre-line}
+.rfq-msg .zh{color:var(--ink);font-weight:600}
+
+.pr-list{display:flex;flex-direction:column;gap:8px}
+.pr-row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,2fr) minmax(0,1.2fr);gap:14px;align-items:center;padding:12px;border:1px solid var(--hairline);border-radius:var(--r-lg)}
+.pr-row.hit{border-color:#e9d3a8;background:linear-gradient(90deg,var(--warning-bg),#fff 40%)}
+@media (max-width:1199px){.pr-row{grid-template-columns:minmax(0,1fr)}}
+.pr-p{display:flex;gap:10px;align-items:center;min-width:0}
+.pr-p .grow{display:flex;flex-direction:column;gap:2px;font-size:13px;min-width:0}
+.pr-comps{display:flex;gap:8px;flex-wrap:wrap}
+.pc{display:flex;flex-direction:column;gap:1px;padding:7px 10px;border-radius:var(--r-md);background:var(--canvas-soft);font-size:13px;min-width:120px}
+.pc.low{background:var(--danger-bg)}
+.pc.low b{color:var(--danger)}
+.pr-ai{display:flex;flex-direction:column;gap:4px;font-size:13px;align-items:flex-start}
+.pr-ai > .caption{display:inline-flex;align-items:center;gap:4px}
+.pr-ai > .caption .i{width:12px;height:12px;color:var(--primary)}
+.pr-ai > b{font-size:16px;font-family:var(--font-display)}
+.fk-list{display:flex;flex-direction:column;gap:8px}
+.fk-row{display:flex;align-items:center;gap:12px;padding:10px 12px;border:1px solid var(--hairline);border-radius:var(--r-lg);flex-wrap:wrap}
+.fk-row .grow{flex:1;min-width:180px;display:flex;flex-direction:column;gap:3px;font-size:13px}
+.fk-imgs{display:flex;align-items:center;gap:4px}
+.fk-imgs > .i{width:14px;height:14px;color:var(--ink-mute)}
+.thumb.tint img{filter:hue-rotate(25deg) saturate(1.4) contrast(.9)}
+.fk-ev{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fk-ev > div{display:flex;flex-direction:column;gap:6px;font-size:12px}
+.fk-ev .thumb{width:100%;height:auto;aspect-ratio:1/1}
+
+.gem-pill{display:inline-flex;align-items:center;gap:4px;height:20px;padding:0 8px;border-radius:var(--r-pill);border:1px solid var(--hairline);background:var(--canvas);
+  color:var(--ink-mute);font-size:10.5px;font-weight:800;letter-spacing:.2px;cursor:pointer;vertical-align:middle;text-transform:none;white-space:nowrap}
+.gem-pill .i{width:11px;height:11px}
+.gem-pill.on{border-color:transparent;background:linear-gradient(135deg,#4f86f7,#8b6fd0);color:#fff}
+.eyebrow .gem-pill{margin-left:6px}
+.gem-prov{display:flex;flex-direction:column;gap:10px}
+.gem-link{color:var(--primary);font-weight:700;padding-left:4px}
+.gem-uses{display:flex;flex-direction:column;gap:6px;padding:10px 12px;border-radius:var(--r-md);background:var(--canvas-soft);font-size:12.5px}
+.gem-uses span{display:flex;gap:6px;align-items:flex-start}.gem-uses .i{width:14px;height:14px;color:var(--primary);flex:none;margin-top:2px}
+.dialog .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:767px){.dialog .two{grid-template-columns:1fr}}
+.gem-ans .gem-li{display:block;padding-left:12px;position:relative}
+.gem-ans .gem-li::before{content:"•";position:absolute;left:0;color:var(--primary)}
+.gem-src{display:flex;justify-content:flex-end;margin-top:6px}
+#aiLab .card-h{flex-wrap:wrap}
+.pd-ai .btn-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.pa-steps{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.pa-steps span{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:var(--r-pill);background:var(--canvas);border:1px solid var(--primary-subdued);font-size:11.5px;font-weight:700;opacity:0;animation:pop .3s ease-out forwards;animation-delay:var(--d)}
+.pa-steps .i{width:12px;height:12px;color:var(--success)}
+.pa-done{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--success);font-weight:700}
+.pa-done .i{width:16px;height:16px;flex:none;margin-top:1px}
+.pa-ch{display:flex;flex-direction:column;gap:6px;margin-top:12px}
+.pa-c{display:flex;align-items:center;gap:10px;padding:7px 8px 7px 10px;border-radius:var(--r-md);background:rgba(255,255,255,.85);border:1px solid var(--hairline);font-size:12.5px}
+.pa-c .grow{flex:1;min-width:0}
+.pa-c .badge{min-width:86px;justify-content:center}
 </style>
 </head>
 <body>
@@ -1539,6 +1712,10 @@ vi:{
   'au.s14':'Tạo voucher theo gợi ý AI',
   'au.s15':'Rút tiền về ngân hàng',
   'au.s16':'Đổi chính sách đổi trả lên 14 ngày',
+  'nav.g.ai':'AI Lab','nav.studio':'AI Studio ảnh & video','nav.sourcing':'Nguồn hàng AI','nav.pricing':'Radar giá & hàng nhái','nav.new':'Mới','phase.p6':'Phase 6 · AI Lab','lab.title':'AI Lab: tính năng AI mới','lab.sub':'Thử nhanh 4 ý tưởng từ tài liệu “Ý tưởng AI siêu đột phá”. Mọi kết quả đều là bản nháp, bạn duyệt trước khi dùng.','lab.eyebrow':'AI Lab','lab.list':'Đăng sản phẩm từ 1 ảnh','lab.listS':'AI điền tên, mô tả, danh mục, tiêu đề theo từng sàn','lab.studio':'Ảnh bối cảnh & video','lab.studioS':'Mỗi nhóm khách một bộ ảnh, video 15 giây có lồng tiếng','lab.src':'Tìm nguồn hàng bằng ảnh','lab.srcS':'So giá xưởng, MOQ, khu vực, tính giá vốn về kho','lab.price':'Radar giá & hàng nhái','lab.priceS':'Theo dõi giá đối thủ đa sàn, bắt shop trộm ảnh','st.sub':'Từ ảnh sản phẩm thật, AI dựng bối cảnh theo từng nhóm khách và làm video bán hàng. Sản phẩm được giữ nguyên, chỉ tạo nền xung quanh.','st.tab.img':'Ảnh bối cảnh','st.tab.video':'Video bán hàng','st.pickT':'1. Chọn sản phẩm','st.pickS':'Nên dùng ảnh nền sáng, chụp thẳng để AI tách nền chính xác.','st.genT':'2. Tạo bộ ảnh theo nhóm khách','st.genS':'Một sản phẩm, 4 bối cảnh: quảng cáo nhắm nhóm nào thì hiển thị ảnh tương ứng.','st.gen':'Tạo 4 bối cảnh','st.regen':'Tạo lại','st.aiLbl':'Ảnh minh hoạ AI','st.emptyS':'Bấm “Tạo 4 bối cảnh”. AI sẽ đặt sản phẩm vào bàn làm việc, phòng ngủ, góc Hàn Quốc và góc quà tặng.','st.seg.office':'Dân văn phòng','st.seg.mom':'Mẹ bỉm sữa','st.seg.genz':'Gen Z','st.seg.gift':'Mua làm quà','st.scene.office':'Bàn làm việc tối giản, ánh sáng ban ngày','st.scene.mom':'Phòng ngủ ấm, tông kem','st.scene.genz':'Góc phong cách Hàn, nhiều cây xanh','st.scene.gift':'Phòng khách, hộp quà và thiệp','st.ad.office':'QC: 25–35 tuổi, văn phòng','st.ad.mom':'QC: nữ 25–40, có con nhỏ','st.ad.genz':'QC: 18–24, TikTok','st.ad.gift':'QC: dịp 20/10, Tết','st.keep':'Giữ nguyên 100% pixel sản phẩm, chỉ tạo nền và ánh sáng xung quanh.','st.fidT':'3. Duyệt độ trung thực','st.fidS':'Tick đủ 5 mục thì mới đăng được.','st.fid.color':'Màu sắc giống hàng thật','st.fid.glaze':'Men, hoa văn không bị AI “vẽ lại”','st.fid.logo':'Logo, tem nhãn đúng vị trí','st.fid.scale':'Tỷ lệ so với đồ vật xung quanh đúng','st.fid.mat':'Chất liệu (gốm, men) nhìn đúng','st.fidAll':'Đã kiểm tra, tick tất cả','st.label':'Gắn nhãn “Ảnh minh hoạ AI” trên ảnh','st.publish':'Đăng lên trang sản phẩm','st.published':'Đã đăng 4 ảnh','st.needFid':'Cần duyệt đủ 5 mục để tránh ảnh đẹp hơn hàng thật.','st.risk':'Rủi ro lớn nhất là ảnh AI đẹp hơn hàng thật, khiến khách khiếu nại và hoàn hàng. Luôn giữ ít nhất 1 ảnh chụp thật và để người duyệt trước khi đăng.','st.howT':'Hướng dẫn','st.how1':'Chọn sản phẩm ở bước 1 (nên là ảnh chụp thật, nền sáng).','st.how2':'Bấm “Tạo 4 bối cảnh”, chờ khoảng 2 giây.','st.how3':'So từng ảnh với hàng thật rồi tick 5 mục ở “Duyệt độ trung thực”.','st.how4':'Bấm “Đăng”. Khi chạy quảng cáo, chọn ảnh khớp với nhóm khách đang nhắm.','st.vT':'Video 15 giây từ ảnh tĩnh','st.vS':'Chuyển động, giọng đọc và phụ đề tự động, khổ 9:16 cho TikTok Shop và Reels.','st.vGen':'Tạo video','st.vIdle':'Bấm “Tạo video” để AI dựng bản xem trước','st.aiVid':'Nội dung do AI tạo','st.vRender':'Đang dựng video và lồng tiếng…','st.voice':'Giọng đọc','st.voice.clone':'Giọng chủ shop (nhân bản)','st.voice.north':'Nữ miền Bắc','st.voice.south':'Nam miền Nam','st.cloneNote':'Cần thu 30 giây giọng mẫu và chủ shop đồng ý cho dùng giọng nói.','st.script':'Kịch bản AI viết','st.v1':'{p}: làm thủ công ở Bát Tràng, mỗi chiếc một vân men riêng.','st.v2':'Giữ nhiệt lâu, dùng được lò vi sóng và máy rửa bát.','st.v3':'Đã có {n} khách chọn, đánh giá 4,6★.','st.v4':'Bấm giỏ hàng ngay, miễn phí giao từ 50k.','st.vLabel':'Ghi rõ “Nội dung do AI tạo” trên video','st.abT':'Phiên bản A/B','st.ab':'Tạo 3 phiên bản','st.abS':'Tạo 3 câu mở đầu khác nhau để thử xem bản nào giữ chân người xem tốt hơn.','st.ab1':'“Cốc này giữ cà phê nóng 40 phút”: mở bằng lợi ích','st.ab2':'“Mỗi chiếc {p} là duy nhất”: mở bằng câu chuyện','st.ab3':'“Dưới 600k cho góc cà phê xịn”: mở bằng giá','st.abCtr':'CTR dự kiến {n}%','st.export':'Đăng nháp TikTok Shop & Reels','st.download':'Tải MP4','st.vRisk':'Giọng nói, khuôn mặt dùng trong video phải có quyền sử dụng. TikTok và quy định quảng cáo yêu cầu ghi rõ nội dung do AI tạo.','st.vh1':'Chọn sản phẩm (nên có từ 3 ảnh trở lên).','st.vh2':'Chọn giọng đọc. Giọng nhân bản cần chủ shop đồng ý.','st.vh3':'Bấm “Tạo video”, xem trước và sửa kịch bản nếu cần.','st.vh4':'Tạo 3 phiên bản A/B rồi đăng nháp để chạy thử.','src.sub':'Từ xu hướng đến báo giá: bắt sản phẩm đang lên, quét ảnh tìm xưởng trên nhiều sàn, tính giá vốn về kho và gửi yêu cầu báo giá hàng loạt.','src.trendT':'Radar xu hướng','src.trendS':'Sản phẩm tăng nhanh 7 ngày qua trên TikTok và sàn','src.trend7':'7 ngày','src.find':'Tìm nguồn','src.dropT':'Quét ảnh tìm nguồn','src.dropS':'Tìm cùng lúc trên 1688, Alibaba, Yiwugo, Made-in-China','src.drop':'Thả hoặc chọn 1 ảnh sản phẩm','src.dropHint':'Ảnh chụp, ảnh đối thủ, ảnh từ TikTok…','src.samples':'Ảnh mẫu:','src.q1':'Bộ cốc trà gốm men cát','src.q2':'Bình gốm dáng tròn','src.q3':'Bát gốm men hoả biến','src.emptyT':'Chưa có ảnh để quét','src.emptyS':'Chọn một sản phẩm trong Radar xu hướng hoặc bấm ảnh mẫu. AI sẽ gom các listing trùng, loại hàng na ná và xếp hạng nhà cung cấp.','src.resT':'Kết quả so khớp','src.resS':'Xếp hạng theo: giá 40% · độ tin cậy 30% · tốc độ giao 20% · gần cửa khẩu 10%','src.detected':'AI nhận diện','src.found':'Quét {n} listing, gom còn {k} nhà cung cấp khớp mẫu','src.scanning':'Đang quét ảnh trên 5 sàn và gom listing trùng…','src.t.factory':'Xưởng sản xuất','src.t.trading':'Công ty thương mại','src.ver':'Đã xác thực','src.origin':'Nguồn gốc','src.yrs':'{n} năm','src.price':'Giá sỉ','src.lead':'Giao {n} ngày','src.sales':'Bán/tháng','src.rep':'Mua lại {n}%','src.sim':'Giống {n}%','reg.jdz':'Cảnh Đức Trấn, Giang Tây','reg.cz':'Triều Châu, Quảng Đông','reg.yw':'Nghĩa Ô, Chiết Giang','reg.dh':'Đức Hoá, Phúc Kiến','reg.gz':'Quảng Châu, Quảng Đông','src.costT':'Giá vốn về kho','src.qty':'Số lượng nhập','src.hs':'Bộ đồ ăn, đồ bếp bằng gốm sứ (AI đề xuất)','src.conf':'Tin cậy {n}%','src.c.unit':'Giá xưởng / sp','src.c.ship':'Vận chuyển về VN (theo kg)','src.c.svc':'Phí dịch vụ order 3%','src.c.duty':'Thuế nhập khẩu (tham khảo 5%)','src.c.vat':'VAT nhập khẩu 10%','src.c.cost':'Giá vốn về kho / sp','src.minPrice':'Giá bán tối thiểu (lãi 30%, đã trừ phí sàn 5%)','src.margin':'Lãi gộp nếu bán như {p}','src.costNote':'Mã HS và thuế suất do AI đề xuất chỉ để tham khảo. Cần đối chiếu biểu thuế hiện hành hoặc hỏi đơn vị khai hải quan.','src.rfqT':'Xin báo giá hàng loạt','src.rfqS':'AI soạn tin bằng tiếng Trung, gửi 3 xưởng xếp đầu','src.rfq1':'AI viết yêu cầu báo giá theo hồ sơ: số lượng, men, đóng gói, LOGO.','src.rfq2':'Gửi qua chat của sàn tới 3 xưởng điểm cao nhất.','src.rfq3':'Khi xưởng trả lời, AI gom thành bảng so sánh để bạn chốt đặt mẫu.','src.rfqBtn':'Soạn & gửi yêu cầu báo giá','src.rfqSent':'Đã gửi tới 3 xưởng. AI sẽ tổng hợp báo giá khi có phản hồi (thường 2–6 giờ).','src.rfqDlgT':'Gửi yêu cầu báo giá','src.rfqDlgS':'AI đã soạn sẵn tin nhắn. Kiểm tra lại trước khi gửi:','src.rfqZh':'您好！我们是越南河内的陶瓷家居店，想采购此款产品 {q} 件。请报：1) 阶梯单价（含包装）；2) 最小起订量；3) 交期；4) 能否定制釉色与LOGO；5) 到广西凭祥的运费。谢谢！','src.rfqVi':'Bản dịch: Chào bạn, shop gốm gia dụng ở Hà Nội muốn nhập {q} sp “{p}”. Vui lòng báo: 1) giá theo bậc số lượng (gồm đóng gói); 2) MOQ; 3) thời gian giao; 4) có làm men và LOGO riêng không; 5) phí ship tới Bằng Tường, Quảng Tây.','src.rfqSend':'Gửi tới 3 xưởng','src.note':'Chỉ dùng dữ liệu công khai, tôn trọng điều khoản từng sàn. Địa chỉ chi tiết của xưởng cần xác minh qua hồ sơ doanh nghiệp hoặc kiểm định.','pr.sub':'Theo dõi cùng mẫu sản phẩm trên Shopee, Lazada, TikTok Shop và website, cảnh báo khi đối thủ giảm giá và đề xuất giá không lỗ.','pr.th':'Cảnh báo khi rẻ hơn','pr.alert':'{n} sản phẩm có đối thủ bán rẻ hơn từ {th}%. Xem đề xuất của AI bên dưới.','pr.tblT':'Giá đối thủ cùng mẫu','pr.tblS':'Tìm bằng ảnh sản phẩm của bạn · cập nhật 6 giờ/lần','pr.mine':'Giá của bạn','pr.cost':'giá vốn','pr.sugg':'AI đề xuất','pr.why':'Sát giá thấp nhất mà vẫn trên giá sàn {f}','pr.whyFloor':'Không thể giảm thêm: đã chạm giá sàn {f} (vốn + lãi tối thiểu 25%)','pr.apply':'Áp dụng','pr.keep':'Giữ giá','pr.applied':'Đã áp dụng','pr.kept':'Giữ nguyên','pr.ok':'Giá đang cạnh tranh','pr.rule':'Quy tắc: không thấp hơn giá vốn + lãi tối thiểu 25% (đã gồm phí sàn 5%), không phá giá kênh chính.','promo.flash':'Flash sale','promo.v10':'Voucher 10%','fk.t':'Shop dùng trộm ảnh, bán hàng nhái','fk.s':'AI quét ảnh gốc của bạn trên các sàn và phân loại từng listing','fk.stolen':'Dùng trộm ảnh gốc','fk.auth':'Đại lý chính thức','fk.fake':'Nghi hàng nhái','fk.sim':'Trùng ảnh {n}%','fk.w1':'đăng 3 ngày trước','fk.w2':'đăng 2 tháng trước','fk.w3':'đăng hôm qua','fk.authNote':'Có trong danh sách đại lý, bỏ qua','fk.report':'Tạo hồ sơ khiếu nại','fk.sent':'Đã gửi khiếu nại','fk.dlgT':'Khiếu nại {s}','fk.dlgS':'AI đã gom bằng chứng. Kiểm tra lại rồi gửi lên sàn:','fk.orig':'Ảnh gốc của bạn','fk.origM':'Đăng lần đầu 12/03/2025 · có dữ liệu gốc (EXIF)','fk.copy':'Listing vi phạm','fk.ev1':'So khớp ảnh: trùng bố cục, nền và vân men','fk.ev2':'Ngày đăng của bạn sớm hơn, có file gốc độ phân giải cao','fk.ev3':'Shop không có trong danh sách đại lý được uỷ quyền','fk.send':'Gửi khiếu nại lên sàn','pr.note':'Tôn trọng robots.txt và điều khoản của từng sàn, giới hạn tần suất truy cập. Thay đổi giá lớn và khiếu nại luôn cần người xác nhận.','pa.t':'Đăng nhanh từ 1 tấm ảnh','pa.s':'AI nhận diện sản phẩm, viết tên và mô tả 2 ngôn ngữ, chọn danh mục, tách nền và tạo ảnh phụ.','pa.btn':'Tạo từ ảnh mẫu','pa.hint':'Bản demo dùng ảnh bộ cốc trà mẫu','pa.step1':'Nhận diện: bộ cốc gốm','pa.step2':'Tách nền, tạo 3 ảnh phụ','pa.step3':'Viết tên & mô tả VI/EN','pa.step4':'Gợi ý giá từ Nguồn hàng AI','pa.done':'Đã điền ảnh, tên, mô tả, danh mục, phân loại, giá và cân nặng. Kiểm tra lại trước khi đăng.','pa.chT':'Tiêu đề tối ưu cho từng sàn','pa.ch.shopee':'Shopee','pa.ch.tiktok':'TikTok Shop','pa.ch.lazada':'Lazada','pa.title.shopee':'Bộ 4 cốc trà gốm Bát Tràng men cát 180ml, quà tặng tân gia','pa.title.tiktok':'Bộ cốc trà gốm men cát siêu xinh cho góc trà chiều','pa.title.lazada':'Bộ 4 Cốc Trà Gốm Sứ Men Cát 180ml Hanoi Ceramic House','pa.name':'Bộ 4 cốc trà gốm men cát 180 ml','pa.desc':'Bộ 4 cốc trà gốm men cát làm thủ công tại Bát Tràng. Dung tích 180 ml, thành dày giữ nhiệt tốt, dùng được lò vi sóng và máy rửa bát. Hợp làm quà tân gia.','pa.var':'Men cát','n.stPub':'Đã đăng 4 ảnh bối cảnh cho {p}','n.stPubL':'Mỗi ảnh có nhãn “Ảnh minh hoạ AI”.','n.stPubN':'Ảnh không gắn nhãn AI, cân nhắc bật lại.','n.stExp':'Đã gửi video nháp sang TikTok Shop & Reels','n.stDl':'Đang tải video MP4 (bản demo)','n.rfq':'Đã gửi yêu cầu báo giá','n.rfqSub':'AI sẽ báo khi có xưởng trả lời.','n.fkSent':'Đã gửi khiếu nại','n.fkSentSub':'{ch} thường phản hồi trong 1–3 ngày làm việc.','n.paDone':'AI đã điền xong sản phẩm','n.paDoneSub':'Kiểm tra lại rồi bấm Đăng sản phẩm.','n.copied':'Đã sao chép tiêu đề','g.s.S13':'AI Studio ảnh & video','g.s.S14':'Nguồn hàng AI','g.s.S15':'Radar giá & hàng nhái','g.f12':'Đăng sản phẩm mới từ 1 ảnh, rồi tạo ảnh bối cảnh và video trong AI Studio','g.f13':'Bắt xu hướng, quét ảnh tìm xưởng, tính giá vốn và xin báo giá','g.f14':'Kiểm tra giá đối thủ, áp giá đề xuất và khiếu nại shop trộm ảnh','g.p6Intro':'Phase 6 (AI Lab) thêm 4 ý tưởng AI từ tài liệu “Ý tưởng AI siêu đột phá”: đăng từ 1 ảnh (B7), ảnh bối cảnh theo nhóm khách (B9), video từ ảnh (B3), tìm nguồn bằng ảnh (A1, A4, A6, A2), radar giá (B1) và chống hàng nhái (B2). Bấm “Chỉ chỗ” để tới đúng nút.','g.c.pAiList':'Sản phẩm mới: bấm “Tạo từ ảnh mẫu”, xem AI điền form và tiêu đề từng sàn','g.c.stScene':'AI Studio: chọn sản phẩm, bấm “Tạo 4 bối cảnh” theo nhóm khách','g.c.stCheck':'AI Studio: duyệt đủ 5 mục độ trung thực rồi đăng ảnh','g.c.stVideo':'AI Studio: sang tab Video, đổi giọng đọc, bấm “Tạo video”','g.c.srcScan':'Nguồn hàng AI: chọn sản phẩm trong Radar xu hướng hoặc ảnh mẫu để quét','g.c.srcCost':'Nguồn hàng AI: chọn xưởng khác, đổi số lượng, xem giá vốn về kho','g.c.srcRfq':'Nguồn hàng AI: soạn và gửi yêu cầu báo giá tới 3 xưởng','g.c.prApply':'Radar giá: áp dụng hoặc giữ giá theo đề xuất của AI','g.c.prFake':'Radar giá: tạo hồ sơ khiếu nại shop dùng trộm ảnh','au.s17':'AI đăng sản phẩm mới từ 1 ảnh','au.s18':'AI Studio: ảnh bối cảnh và video','au.s19':'Tìm nguồn bằng ảnh, gửi báo giá','au.s20':'Radar giá và khiếu nại hàng nhái',
+  'gem.title':'Kết nối AI thật (Gemini / OpenRouter)',
+    'gem.prov':'Nhà cung cấp','gem.creditT':'Hết credit OpenRouter','gem.credit':'Tài khoản OpenRouter không đủ credit cho model này. Nạp thêm credit hoặc chọn model miễn phí.','gem.orKey':'OpenRouter API key','gem.orGetKey':'Lấy key tại openrouter.ai','gem.orText':'Model văn bản & đọc ảnh','gem.orImage':'Model tạo / sửa ảnh','gem.orTip':'OpenRouter: đọc ảnh và viết nội dung chỉ dùng model miễn phí (:free), bận thì thử model miễn phí khác; hết lượt miễn phí thì quay về mô phỏng, không tự chuyển sang model tốn phí. Chỉ tạo ảnh là tính phí: khoảng $0,03 mỗi ảnh, trừ vào credit OpenRouter.','gem.orProxyOn':'Máy chủ đã có sẵn OpenRouter key (proxy /api/openrouter). Bạn không cần nhập key.','gem.imgOffOR':'Tắt tạo ảnh','fit.enableNoteOR':'Chọn model tạo ảnh của OpenRouter (mặc định gemini-3.1-flash-lite-image, khoảng $0,03 mỗi ảnh) rồi Lưu.','gem.sub':'Mặc định demo chạy bản mô phỏng. Chọn nhà cung cấp và nhập API key để các tính năng AI gọi model thật: đọc ảnh, viết nội dung, tạo ảnh.','gem.key':'Gemini API key','gem.getKey':'Lấy key tại Google AI Studio','gem.text':'Model văn bản & đọc ảnh','gem.image':'Model tạo / sửa ảnh','gem.imgCost':'Mặc định bật model rẻ nhất. Chỉ tính phí khi bạn bấm nút tạo ảnh hoặc mặc thử; autoplay luôn dùng mô phỏng.','gem.on':'Dùng AI thật (bỏ chọn để quay về mô phỏng)','gem.test':'Kiểm tra kết nối','gem.save':'Lưu','gem.saved':'Đã lưu cài đặt Gemini','gem.okT':'Kết nối AI thành công','gem.okS':'Model {m} đã trả lời. Các tính năng AI giờ dùng model thật.','gem.errT':'AI báo lỗi','gem.fallback':'Tạm dùng kết quả mô phỏng.','gem.noKey':'Chưa nhập API key','gem.privacy':'Key chỉ lưu trong trình duyệt này (localStorage) và được gửi thẳng tới nhà cung cấp (Google hoặc OpenRouter). Không dùng trên máy công cộng. Khi deploy công khai, đặt key ở biến môi trường GEMINI_API_KEY / OPENROUTER_API_KEY trên Vercel thay vì nhập ở đây.','gem.proxyOn':'Máy chủ đã có sẵn key (proxy /api/gemini). Bạn không cần nhập key.','gem.mock':'Mô phỏng','gem.needKey':'Tính năng này cần AI thật. Chọn Gemini hoặc OpenRouter rồi nhập API key bên dưới.','gem.usesT':'Trong app mua hàng, Gemini dùng cho:','gem.useB1':'Thử tại nhà: ghép sản phẩm vào ảnh phòng thật, có ánh sáng và bóng đổ','gem.useB2':'Thử tại nhà: nhận xét màu, kích thước, chỗ đặt','gem.useB3':'Tìm bằng ảnh: nhận diện vật thể và xếp hạng sản phẩm giống','gem.useB4':'Tóm tắt khen, chê từ nội dung đánh giá','gem.useS1':'Đăng từ 1 ảnh: đọc ảnh, viết tên, mô tả, tiêu đề từng sàn','gem.useS2':'AI Studio: tạo 4 ảnh bối cảnh thật và kịch bản video','gem.useS3':'Nguồn hàng: soạn yêu cầu báo giá tiếng Trung','gem.useS4':'Hỏi AI: trả lời câu hỏi tự do dựa trên số liệu shop','gem.usesS':'Trong Seller Center, Gemini dùng cho:','gem.btn':'Kết nối AI','gem.working':'Gemini đang xử lý…','to.gemT':'Ảnh chân thực bằng Gemini','to.gemS':'Gemini ghép sản phẩm vào đúng ảnh phòng, khớp ánh sáng và bóng đổ, giữ nguyên kiểu dáng và màu.','to.gemBtn':'Tạo ảnh bằng Gemini','to.gemAgain':'Tạo lại','to.gemQuick':'Xem bản ghép nhanh','to.gemView':'Xem ảnh Gemini','to.gemBusy':'Gemini đang ghép ảnh, khoảng 10–30 giây…','to.gemTag':'Ảnh tạo bởi Gemini','to.gemNotes':'Nhận xét của Gemini','to.dl':'Đã tải ảnh về máy','vs.gem':'Gemini đang nhận diện ảnh…','rvai.gemBtn':'Tóm tắt bằng Gemini','rvai.gemAgain':'Tóm tắt lại','rvai.gemNote':'Gemini tóm tắt từ nội dung đánh giá','cop.gemThinking':'Gemini đang đọc số liệu shop…','pa.upload':'Tải ảnh của bạn','pa.gemDone':'Gemini đã đọc ảnh và điền tên, mô tả, danh mục, phân loại, giá gợi ý. Kiểm tra lại trước khi đăng.','src.rfqDrafting':'Gemini đang soạn…',
+  'gem.imgOffOpt':'Tắt tạo ảnh (key miễn phí)','gem.imgOff':'Tạo ảnh đang tắt. Key miễn phí gần như không có lượt cho model tạo ảnh; muốn dùng thì bật billing rồi chọn model ảnh trong Kết nối Gemini.','gem.quotaT':'Hết lượt AI','gem.quota':'Đã chạm giới hạn lượt gọi (theo phút hoặc theo ngày). Chờ khoảng 1 phút rồi thử lại, hoặc đổi model / nhà cung cấp.','gem.freeTip':'Tạo ảnh đang bật mặc định (model rẻ nhất, có tính phí). Key Gemini miễn phí thường không có lượt tạo ảnh: nếu báo “Hết lượt AI”, hãy bật billing, dùng OpenRouter hoặc chọn “Tắt tạo ảnh”.','to.gemNotesBtn':'Nhận xét phòng bằng Gemini','to.gemSFree':'Key miễn phí: Gemini đọc ảnh phòng và nhận xét màu, kích thước, chỗ đặt. Ghép ảnh chân thực cần bật model tạo ảnh (trả phí).',
   'au.btn':'Chạy demo','au.title':'Tự chạy kịch bản demo','au.sub':'App sẽ đặt lại dữ liệu, đăng xuất, rồi tự đi qua {n} bước của buổi sáng chủ shop. Khoảng {min} phút ở tốc độ Vừa.',
   'au.speed':'Tốc độ','au.slow':'Chậm','au.normal':'Vừa','au.fast':'Nhanh','au.start':'Bắt đầu tự chạy','au.manual':'Tự thao tác',
   'au.pause':'Dừng','au.resume':'Tiếp','au.exit':'Thoát','au.step':'{i}/{n}','au.done':'Demo hoàn tất','au.doneSub':'Bạn có thể tự thao tác tiếp hoặc chạy lại.',
@@ -1858,6 +2035,10 @@ en:{
   'au.s14':'Create a voucher from the AI idea',
   'au.s15':'Withdraw to the bank',
   'au.s16':'Change returns to 14 days',
+  'nav.g.ai':'AI Lab','nav.studio':'AI photo & video studio','nav.sourcing':'AI sourcing','nav.pricing':'Price radar & fakes','nav.new':'New','phase.p6':'Phase 6 · AI Lab','lab.title':'AI Lab: new AI features','lab.sub':'Try 4 ideas from the “Breakthrough AI ideas” doc. Every result is a draft you review before it goes live.','lab.eyebrow':'AI Lab','lab.list':'List a product from 1 photo','lab.listS':'AI fills name, description, category and per-channel titles','lab.studio':'Lifestyle photos & video','lab.studioS':'A photo set per customer group, plus a 15-second voiced video','lab.src':'Source by image','lab.srcS':'Compare factory prices, MOQ, region and landed cost','lab.price':'Price radar & fakes','lab.priceS':'Track competitor prices and catch stolen photos','st.sub':'From a real product photo, AI builds scenes for each customer group and makes a sales video. The product stays untouched; only the surroundings are generated.','st.tab.img':'Lifestyle photos','st.tab.video':'Sales video','st.pickT':'1. Pick a product','st.pickS':'A straight-on shot on a light background gives the cleanest cut-out.','st.genT':'2. Generate a set per customer group','st.genS':'One product, 4 scenes: show the one that matches each ad audience.','st.gen':'Generate 4 scenes','st.regen':'Regenerate','st.aiLbl':'AI illustration','st.emptyS':'Tap “Generate 4 scenes”. AI places the product on a desk, in a bedroom, a Korean-style corner and a gift setting.','st.seg.office':'Office workers','st.seg.mom':'Young parents','st.seg.genz':'Gen Z','st.seg.gift':'Gift buyers','st.scene.office':'Minimal desk, daylight','st.scene.mom':'Warm bedroom, cream tones','st.scene.genz':'Korean-style corner, lots of plants','st.scene.gift':'Living room, gift box and card','st.ad.office':'Ads: 25–35, office','st.ad.mom':'Ads: women 25–40, kids','st.ad.genz':'Ads: 18–24, TikTok','st.ad.gift':'Ads: holidays','st.keep':'100% of the product pixels are kept; only background and lighting are generated.','st.fidT':'3. Fidelity review','st.fidS':'All 5 must be ticked before you can publish.','st.fid.color':'Colour matches the real item','st.fid.glaze':'Glaze and pattern not “redrawn” by AI','st.fid.logo':'Logo and labels in the right place','st.fid.scale':'Scale against nearby objects is right','st.fid.mat':'Material (clay, glaze) looks right','st.fidAll':'Checked, tick all','st.label':'Add an “AI illustration” label on the image','st.publish':'Publish to product page','st.published':'4 images published','st.needFid':'Review all 5 so images never look better than the real thing.','st.risk':'The biggest risk is AI images looking better than the product, which drives complaints and returns. Always keep at least one real photo and have a person review before publishing.','st.howT':'How to use','st.how1':'Pick a product in step 1 (ideally a real photo on a light background).','st.how2':'Tap “Generate 4 scenes” and wait about 2 seconds.','st.how3':'Compare each image with the real item and tick the 5 fidelity checks.','st.how4':'Publish. When running ads, use the image that matches the audience.','st.vT':'15-second video from still photos','st.vS':'Motion, voice-over and captions in 9:16 for TikTok Shop and Reels.','st.vGen':'Generate video','st.vIdle':'Tap “Generate video” for an AI preview','st.aiVid':'AI-generated content','st.vRender':'Rendering video and voice-over…','st.voice':'Voice','st.voice.clone':'Shop owner’s voice (cloned)','st.voice.north':'Female, northern accent','st.voice.south':'Male, southern accent','st.cloneNote':'Needs a 30-second voice sample and the owner’s consent.','st.script':'AI-written script','st.v1':'{p}: handmade in Bat Trang, every glaze is one of a kind.','st.v2':'Keeps drinks hot and is microwave and dishwasher safe.','st.v3':'Chosen by {n} customers, rated 4.6★.','st.v4':'Tap the cart now, free shipping on eligible orders.','st.vLabel':'Show “AI-generated content” on the video','st.abT':'A/B versions','st.ab':'Make 3 versions','st.abS':'Make 3 different hooks to see which one keeps viewers watching.','st.ab1':'“Keeps coffee hot for 40 minutes”: benefit hook','st.ab2':'“Every {p} is unique”: story hook','st.ab3':'“Under $25 for a better coffee corner”: price hook','st.abCtr':'Est. CTR {n}%','st.export':'Draft to TikTok Shop & Reels','st.download':'Download MP4','st.vRisk':'You need rights to any voice or face used. TikTok and ad rules require labelling AI-generated content.','st.vh1':'Pick a product (3+ photos works best).','st.vh2':'Choose a voice. A cloned voice needs the owner’s consent.','st.vh3':'Tap “Generate video”, preview, and edit the script if needed.','st.vh4':'Make 3 A/B versions, then post drafts to test.','src.sub':'From trend to quote: catch rising products, find factories across marketplaces by image, work out landed cost and send quote requests in bulk.','src.trendT':'Trend radar','src.trendS':'Fastest-rising products on TikTok and marketplaces this week','src.trend7':'7 days','src.find':'Find suppliers','src.dropT':'Search suppliers by image','src.dropS':'Searches 1688, Alibaba, Yiwugo and Made-in-China at once','src.drop':'Drop or pick 1 product photo','src.dropHint':'A photo, a competitor image, a TikTok screenshot…','src.samples':'Samples:','src.q1':'Sand-glaze tea cup set','src.q2':'Round stoneware vase','src.q3':'Flambé-glaze bowl','src.emptyT':'No image to scan yet','src.emptyS':'Pick a product from the trend radar or tap a sample. AI groups duplicate listings, drops look-alikes and ranks suppliers.','src.resT':'Matches','src.resS':'Ranked by price 40% · trust 30% · lead time 20% · distance to border 10%','src.detected':'AI detected','src.found':'Scanned {n} listings, grouped into {k} matching suppliers','src.scanning':'Scanning 5 marketplaces and grouping duplicates…','src.t.factory':'Factory','src.t.trading':'Trading company','src.ver':'Verified','src.origin':'Origin','src.yrs':'{n} yrs','src.price':'Wholesale','src.lead':'Ships in {n} days','src.sales':'Sold/month','src.rep':'{n}% repeat','src.sim':'{n}% match','reg.jdz':'Jingdezhen, Jiangxi','reg.cz':'Chaozhou, Guangdong','reg.yw':'Yiwu, Zhejiang','reg.dh':'Dehua, Fujian','reg.gz':'Guangzhou, Guangdong','src.costT':'Landed cost','src.qty':'Order quantity','src.hs':'Ceramic tableware and kitchenware (AI suggestion)','src.conf':'{n}% confidence','src.c.unit':'Factory price / unit','src.c.ship':'Freight to Vietnam (by kg)','src.c.svc':'Sourcing agent fee 3%','src.c.duty':'Import duty (ref. 5%)','src.c.vat':'Import VAT 10%','src.c.cost':'Landed cost / unit','src.minPrice':'Minimum price (30% margin, after 5% fee)','src.margin':'Gross margin if sold like {p}','src.costNote':'The HS code and rates are AI suggestions for reference only. Check the current tariff schedule or ask your customs broker.','src.rfqT':'Bulk quote requests','src.rfqS':'AI writes in Chinese and sends to the top 3 factories','src.rfq1':'AI drafts the request from your brief: quantity, glaze, packaging, logo.','src.rfq2':'Sends through marketplace chat to the 3 highest-scoring factories.','src.rfq3':'As replies arrive, AI builds a comparison table so you can order samples.','src.rfqBtn':'Draft & send quote request','src.rfqSent':'Sent to 3 factories. AI will compile quotes as they reply (usually 2–6 hours).','src.rfqDlgT':'Send quote request','src.rfqDlgS':'AI drafted the message. Review it before sending:','src.rfqZh':'您好！我们是越南河内的陶瓷家居店，想采购此款产品 {q} 件。请报：1) 阶梯单价（含包装）；2) 最小起订量；3) 交期；4) 能否定制釉色与LOGO；5) 到广西凭祥的运费。谢谢！','src.rfqVi':'Translation: Hello, we are a ceramic homeware shop in Hanoi and would like to order {q} units of “{p}”. Please quote: 1) tiered unit price incl. packaging; 2) MOQ; 3) lead time; 4) custom glaze and logo; 5) freight to Pingxiang, Guangxi.','src.rfqSend':'Send to 3 factories','src.note':'Uses public data only and respects each marketplace’s terms. A factory’s full address needs verifying through business records or an audit.','pr.sub':'Tracks the same product on Shopee, Lazada, TikTok Shop and the web, alerts you to price drops and suggests prices that never lose money.','pr.th':'Alert when cheaper by','pr.alert':'{n} products have competitors at least {th}% cheaper. See AI suggestions below.','pr.tblT':'Competitor prices, same product','pr.tblS':'Matched by your product image · refreshed every 6 hours','pr.mine':'Your price','pr.cost':'cost','pr.sugg':'AI suggests','pr.why':'Close to the lowest price, still above the {f} floor','pr.whyFloor':'Can’t go lower: at the {f} floor (cost + 25% minimum margin)','pr.apply':'Apply','pr.keep':'Keep price','pr.applied':'Applied','pr.kept':'Kept','pr.ok':'Price is competitive','pr.rule':'Rule: never below cost + 25% minimum margin (including the 5% fee), never undercut your main channel.','promo.flash':'Flash sale','promo.v10':'10% voucher','fk.t':'Stolen photos & knock-offs','fk.s':'AI scans marketplaces for your original photos and classifies each listing','fk.stolen':'Uses your photos','fk.auth':'Authorised reseller','fk.fake':'Likely knock-off','fk.sim':'{n}% image match','fk.w1':'listed 3 days ago','fk.w2':'listed 2 months ago','fk.w3':'listed yesterday','fk.authNote':'On your reseller list, ignored','fk.report':'Build a report','fk.sent':'Report sent','fk.dlgT':'Report {s}','fk.dlgS':'AI gathered the evidence. Review it, then send it to the marketplace:','fk.orig':'Your original','fk.origM':'First posted 12 Mar 2025 · original metadata (EXIF)','fk.copy':'Infringing listing','fk.ev1':'Image match: same composition, background and glaze pattern','fk.ev2':'Your post is older and you hold the high-res original','fk.ev3':'The shop is not on your authorised reseller list','fk.send':'Send report to marketplace','pr.note':'Respect robots.txt and each marketplace’s terms, and limit request rates. Large price changes and reports always need a person to confirm.','pa.t':'List from a single photo','pa.s':'AI recognises the product, writes the name and description in 2 languages, picks a category, removes the background and makes extra shots.','pa.btn':'Generate from sample photo','pa.hint':'The demo uses a sample tea cup photo','pa.step1':'Detected: ceramic cup set','pa.step2':'Background removed, 3 extra shots','pa.step3':'Name & description VI/EN','pa.step4':'Price from AI sourcing','pa.done':'Photos, name, description, category, variant, price and weight are filled in. Review before publishing.','pa.chT':'Titles tuned for each channel','pa.ch.shopee':'Shopee','pa.ch.tiktok':'TikTok Shop','pa.ch.lazada':'Lazada','pa.title.shopee':'Set of 4 Bat Trang sand-glaze tea cups 180ml, housewarming gift','pa.title.tiktok':'Cutest sand-glaze tea cups for your afternoon tea corner','pa.title.lazada':'Set Of 4 Sand Glaze Ceramic Tea Cups 180ml Hanoi Ceramic House','pa.name':'Set of 4 sand-glaze tea cups, 180 ml','pa.desc':'Set of 4 sand-glaze stoneware tea cups, handmade in Bat Trang. 180 ml each, thick walls keep tea warm, microwave and dishwasher safe. A lovely housewarming gift.','pa.var':'Sand glaze','n.stPub':'Published 4 lifestyle images for {p}','n.stPubL':'Each image carries an “AI illustration” label.','n.stPubN':'Images have no AI label; consider turning it back on.','n.stExp':'Video draft sent to TikTok Shop & Reels','n.stDl':'Downloading MP4 (demo)','n.rfq':'Quote request sent','n.rfqSub':'AI will let you know when factories reply.','n.fkSent':'Report sent','n.fkSentSub':'{ch} usually replies within 1–3 business days.','n.paDone':'AI filled in the product','n.paDoneSub':'Review, then tap Publish.','n.copied':'Title copied','g.s.S13':'AI photo & video studio','g.s.S14':'AI sourcing','g.s.S15':'Price radar & fakes','g.f12':'List a new product from 1 photo, then create lifestyle images and a video in AI Studio','g.f13':'Catch a trend, find factories by image, work out landed cost and request quotes','g.f14':'Check competitor prices, apply the suggestion and report stolen photos','g.p6Intro':'Phase 6 (AI Lab) adds AI ideas from the “Breakthrough AI ideas” doc: list from 1 photo (B7), lifestyle images per customer group (B9), video from photos (B3), sourcing by image (A1, A4, A6, A2), price radar (B1) and knock-off detection (B2). Tap “Show me” to jump to the right button.','g.c.pAiList':'New product: tap “Generate from sample photo”, watch AI fill the form and channel titles','g.c.stScene':'AI Studio: pick a product, tap “Generate 4 scenes” per customer group','g.c.stCheck':'AI Studio: pass all 5 fidelity checks, then publish','g.c.stVideo':'AI Studio: open the Video tab, change the voice, tap “Generate video”','g.c.srcScan':'AI sourcing: pick a trend or a sample image to scan','g.c.srcCost':'AI sourcing: pick another factory, change quantity, see landed cost','g.c.srcRfq':'AI sourcing: draft and send a quote request to 3 factories','g.c.prApply':'Price radar: apply or keep the AI price suggestion','g.c.prFake':'Price radar: build a report against a shop using stolen photos','au.s17':'AI lists a new product from 1 photo','au.s18':'AI Studio: lifestyle images and video','au.s19':'Source by image, request quotes','au.s20':'Price radar and knock-off report',
+  'gem.title':'Connect real AI (Gemini / OpenRouter)',
+    'gem.prov':'Provider','gem.creditT':'Out of OpenRouter credit','gem.credit':'Your OpenRouter account doesn’t have enough credit for this model. Top up or pick a free model.','gem.orKey':'OpenRouter API key','gem.orGetKey':'Get a key at openrouter.ai','gem.orText':'Text & vision model','gem.orImage':'Image generation / editing model','gem.orTip':'OpenRouter: reading images and writing copy only use free (:free) models, trying another free model when one is busy; if free quota runs out it falls back to simulation and never switches to a paid model. Only image generation is billed: about $0.03 per image, from your OpenRouter credit.','gem.orProxyOn':'The server already has an OpenRouter key (proxy /api/openrouter). No need to enter one.','gem.imgOffOR':'Image generation off','fit.enableNoteOR':'Pick an OpenRouter image model (default gemini-3.1-flash-lite-image, about $0.03 per image) and Save.','gem.sub':'The demo runs on simulated results by default. Pick a provider and add an API key so AI features call real models: reading images, writing copy and generating images.','gem.key':'Gemini API key','gem.getKey':'Get a key in Google AI Studio','gem.text':'Text & vision model','gem.image':'Image generation / editing model','gem.imgCost':'The cheapest model is on by default. You are only billed when you tap a generate or try-on button; autoplay always uses simulation.','gem.on':'Use real AI (untick to go back to simulation)','gem.test':'Test connection','gem.save':'Save','gem.saved':'Gemini settings saved','gem.okT':'AI connected','gem.okS':'Model {m} replied. AI features now use the real model.','gem.errT':'AI returned an error','gem.fallback':'Using simulated results for now.','gem.noKey':'No API key entered','gem.privacy':'The key is stored only in this browser (localStorage) and sent straight to the provider (Google or OpenRouter). Don’t use it on a shared computer. For a public deploy, set GEMINI_API_KEY / OPENROUTER_API_KEY as Vercel environment variables instead.','gem.proxyOn':'The server already has a key (proxy /api/gemini). No need to enter one.','gem.mock':'Simulated','gem.needKey':'This feature needs real AI. Pick Gemini or OpenRouter and enter an API key below.','gem.usesT':'In the shopping app, Gemini powers:','gem.useB1':'Try at home: blends the product into a real room photo with light and shadow','gem.useB2':'Try at home: notes on colour, size and placement','gem.useB3':'Image search: recognises the object and ranks similar products','gem.useB4':'Review summary: pros and cons from the review text','gem.useS1':'List from 1 photo: reads the image, writes name, description, channel titles','gem.useS2':'AI Studio: 4 real lifestyle images and a video script','gem.useS3':'Sourcing: drafts the quote request in Chinese','gem.useS4':'Ask AI: answers free-form questions from shop data','gem.usesS':'In Seller Center, Gemini powers:','gem.btn':'Connect AI','gem.working':'Gemini is working…','to.gemT':'Photo-real preview with Gemini','to.gemS':'Gemini blends the product into this exact room photo, matching light and shadow while keeping its shape and colour.','to.gemBtn':'Generate with Gemini','to.gemAgain':'Regenerate','to.gemQuick':'Show quick preview','to.gemView':'Show Gemini image','to.gemBusy':'Gemini is compositing, about 10–30 seconds…','to.gemTag':'Generated by Gemini','to.gemNotes':'Gemini notes','to.dl':'Image downloaded','vs.gem':'Gemini is reading the photo…','rvai.gemBtn':'Summarise with Gemini','rvai.gemAgain':'Summarise again','rvai.gemNote':'Summarised by Gemini from the review text','cop.gemThinking':'Gemini is reading your shop data…','pa.upload':'Upload your photo','pa.gemDone':'Gemini read the photo and filled in name, description, category, variant and a suggested price. Review before publishing.','src.rfqDrafting':'Gemini is drafting…',
+  'gem.imgOffOpt':'Image generation off (free key)','gem.imgOff':'Image generation is off. Free keys get almost no image-model quota; enable billing and pick an image model in Connect Gemini to use it.','gem.quotaT':'AI quota used up','gem.quota':'Hit the rate limit (per minute or per day). Wait about a minute and retry, or switch model / provider.','gem.freeTip':'Image generation is on by default (cheapest model, billed). Free Gemini keys usually have no image quota: if you see “AI quota used up”, enable billing, use OpenRouter, or pick “Image generation off”.','to.gemNotesBtn':'Get room notes from Gemini','to.gemSFree':'Free key: Gemini reads your room photo and comments on colour, size and placement. Photo-real compositing needs the (paid) image model.',
   'au.btn':'Run demo','au.title':'Run the demo script','au.sub':'The app resets the data, signs out, then walks through {n} steps of the shop owner’s morning by itself. About {min} minutes at Normal speed.',
   'au.speed':'Speed','au.slow':'Slow','au.normal':'Normal','au.fast':'Fast','au.start':'Start autoplay','au.manual':'Explore myself',
   'au.pause':'Pause','au.resume':'Resume','au.exit':'Exit','au.step':'{i}/{n}','au.done':'Demo complete','au.doneSub':'Keep exploring on your own or run it again.',
@@ -1890,7 +2071,7 @@ function t(k, vars){
   if (s == null && /^[pd]\./.test(k)){ const P = PRODUCTS[k.slice(2)]; const f = P && (k[0] === 'p' ? P.name : P.desc); s = f ? (f[state.lang] || f.vi || '') : null; }
   if (s == null) s = k;
   if (vars) for (const [a, b] of Object.entries(vars)) s = s.split('{' + a + '}').join(b);
-  return s;
+  return window.__aiBrand && window.__aiBrand !== 'Gemini' && /^(to\.gem|fit\.gem|vs\.gem|rvai\.gem|gem\.working|gem\.btn|gem\.use|cop\.gem|pa\.gem|fit\.enableImg|src\.rfqDrafting)/.test(k) ? s.replace(/Gemini/g, window.__aiBrand) : s;
 }
 /* VND for vi, USD for en — same rule as the shopper app */
 function money(usd, short=false){
@@ -1960,6 +2141,8 @@ const ICONS = {
   layout:'<rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/>',
   list:'<line x1="9" y1="6" x2="21" y2="6"/><line x1="9" y1="12" x2="21" y2="12"/><line x1="9" y1="18" x2="21" y2="18"/><polyline points="3 6 4.5 7.5 7 5"/><polyline points="3 12 4.5 13.5 7 11"/><polyline points="3 18 4.5 19.5 7 17"/>',
   play:'<polygon points="6 4 20 12 6 20 6 4"/>', pause:'<rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/>',
+  image:'<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>',
+  video:'<rect x="2" y="6" width="14" height="12" rx="2"/><polygon points="22 8 16 12 22 16 22 8"/>',
   cmd:'<path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 0 0 0-6z"/>',
 };
 const ic = (n, cls='') => `<svg class="i ${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICONS[n]}</svg>`;
@@ -1988,7 +2171,7 @@ function logoMark(px = 28){
 /* Seller lockup: cube + "T&T" + "SELLER CENTER" */
 const lockup = (px = 34) => `<span class="lockup" aria-label="T&amp;T Seller Center">${logoMark(px)}<span class="lk-t"><span class="logo-word">T<span class="amp">&amp;</span>T</span><span class="lk-sub">${t('app.sub')}</span></span></span>`;
 const photo = (id, w=120, alt='') =>
-  `<img class="ph" src="https://images.unsplash.com/photo-${id}?w=${w}&h=${w}&fit=crop&auto=format&q=70" alt="${esc(alt)}" loading="lazy" decoding="async" onerror="this.removeAttribute('src');this.classList.add('err')">`;
+  `<img class="ph" src="${/^(data:|blob:|https?:)/.test(id) ? id : `https://images.unsplash.com/photo-${id}?w=${w}&h=${w}&fit=crop&auto=format&q=70`}" alt="${esc(alt)}" loading="lazy" decoding="async" onerror="this.removeAttribute('src');this.classList.add('err')">`;
 const stars = n => `<span class="stars" aria-label="${n}/5">${[1,2,3,4,5].map(i => `<svg class="i ${i<=Math.round(n)?'on':''}" viewBox="0 0 24 24">${ICONS.star}</svg>`).join('')}</span>`;
 const SHOP_IMG = '1612196808214-b8e1d6145a8c';
 
@@ -2183,6 +2366,10 @@ const NAV = [
   {g:'nav.g.grow'},
   {id:'promos',    ic:'tag',    ph:'p5'},
   {id:'reports',   ic:'chart',  ph:'p5'},
+  {g:'nav.g.ai'},
+  {id:'studio',    ic:'image',   ph:'p6', n:() => t('nav.new')},
+  {id:'sourcing',  ic:'search',  ph:'p6'},
+  {id:'pricing',   ic:'trendUp', ph:'p6', n:() => { const S = prState(); return Object.keys(COMP).filter(id => PRODUCTS[id] && !S.done[id] && suggestPrice(id).low < PRODUCTS[id].price * (1 - S.th / 100)).length; }, hot:true},
   {g:'nav.g.shop'},
   {id:'finance',   ic:'wallet', ph:'p5'},
   {id:'settings',  ic:'gear',   ph:'p5'},
@@ -2273,6 +2460,7 @@ function copBodyHTML(){
 function chatMsgHTML(m){
   if (m.me) return `<div class="msg me"><div class="bubble">${esc(m.text)}</div></div>`;
   if (m.typing) return `<div class="msg ai"><span class="ai-ic sm">${ic('spark')}</span><div class="bubble"><span class="typing-dots"><i></i><i></i><i></i></span></div></div>`;
+  if (m.gem) return `<div class="msg ai"><span class="ai-ic sm">${ic('spark')}</span><div class="bubble gem-ans">${mdLite(m.gem)}<span class="gem-src">${gemPill()}</span></div></div>`;
   return `<div class="msg ai"><span class="ai-ic sm">${ic('spark')}</span><div class="bubble">${answerHTML(m.q)}</div></div>`;
 }
 function answerHTML(q){
@@ -2333,8 +2521,12 @@ function renderPage(){
     : state.route === 'reports' ? reportsPageHTML()
     : state.route === 'finance' ? financePageHTML()
     : state.route === 'settings' ? settingsPageHTML()
+    : state.route === 'studio' ? studioPageHTML()
+    : state.route === 'sourcing' ? sourcingPageHTML()
+    : state.route === 'pricing' ? pricingPageHTML()
     : state.route === 'dashboard' ? dashboardHTML() : cur ? placeholderHTML(cur) : componentsHTML();
   page.innerHTML = body + '<div class="bulk-host" id="bulkHost"></div>';
+  if (state.route === 'studio' && state.st && state.st.vGen) playVideo();
   bindCharts(page);
   syncBulk();
 }
@@ -2390,6 +2582,7 @@ function dashboardHTML(){
       <div class="dash-tools"><div class="segmented" id="rangeSeg" role="group">${['7','30','90'].map(x => `<button class="${r===x?'active':''}" data-action="drange" data-v="${x}">${t('dash.r' + x)}</button>`).join('')}</div>
         <button class="btn btn-neutral btn-sm" aria-label="${t('tbl.export')}">${ic('download')}<span class="hide-m">${t('tbl.export')}</span></button></div></div>
     ${briefHTML()}
+    ${aiLab()}
     ${kpiCards(r)}
     <div class="grid g-21">
       <div class="card"><div class="card-h"><div class="ch-t"><h3>${t('dash.chart')}</h3><span class="caption">${t('dash.chartSub', {n})}</span></div>
@@ -2947,6 +3140,7 @@ function productEditHTML(id){
     ${Object.keys(E).length ? `<div class="alert danger" id="pdErr">${ic('alert')}<span>${t('pd.errFix', {n:Object.keys(E).length})}</span></div>` : ''}
     <div class="pd-grid">
       <div class="col">
+        ${pdAiHTML(d)}
         <div class="card pd-sec" id="pdPhotos"><div class="card-h"><div class="ch-t"><h3>${t('pd.photos')}</h3><span class="caption">${t('pd.photosSub')}</span></div></div>
           <div class="gal">${d.imgs.map((im, i) => `<div class="gi">${photo(im, 200)}${i === 0 ? `<span class="cover">${t('pd.cover')}</span>` : ''}<button class="x" data-action="pdDelImg" data-i="${i}" aria-label="Remove">${ic('x')}</button></div>`).join('')}
             <button class="add" data-action="pdAddImg">${ic('plus')}${t('pd.addPhoto')}</button></div></div>
@@ -3011,6 +3205,511 @@ function pdSave(){
   markDone(isNew ? 'pNew' : 'pEdit');
   notify({title:t(isNew ? 'n.pCreated' : 'n.pSaved', {p:esc(t('p.' + id))})});
   go('products');
+}
+
+
+/* =========================================================
+   GEMINI — tuỳ chọn gọi AI thật (Google Gemini API)
+   Ưu tiên: key người dùng nhập (chỉ lưu localStorage của trình duyệt này, gửi thẳng tới Google)
+   → proxy /api/gemini trên Vercel (key nằm trong biến môi trường GEMINI_API_KEY)
+   → không có cả hai thì các tính năng AI quay về bản mô phỏng.
+   Cấu hình dùng chung key 'tt_gem' nên app mua hàng và Seller Center nhập một lần là đủ.
+   ========================================================= */
+const GEM_TEXT_MODELS = ['gemini-3.5-flash-lite', 'gemini-3.8-flash', 'gemini-3.6-flash'];
+const GEM_IMAGE_MODELS = ['gemini-3.1-flash-lite-image', 'gemini-3.1-flash-image', 'gemini-nano-banana-2.1', 'gemini-3-pro-image'];
+/* OpenRouter: văn bản / đọc ảnh CHỈ dùng model miễn phí (":free" và router "openrouter/free"); model hay bị nghẽn
+   nên mỗi lần gọi kèm danh sách dự phòng toàn model miễn phí. Chỉ tạo ảnh là tính phí. */
+const OR_TEXT_MODELS = ['google/gemma-4-31b-it:free', 'google/gemma-4-26b-a4b-it:free', 'openrouter/free'];
+const orFree = m => /:free$/.test(m) || m === 'openrouter/free';
+const OR_IMAGE_MODELS = ['google/gemini-3.1-flash-lite-image', 'google/gemini-3.1-flash-image', 'google/gemini-2.5-flash-image', 'openai/gpt-5-image-mini'];
+/* JSON từ model đôi khi bọc trong ```json … ``` hoặc kèm lời dẫn → lấy đoạn từ { đầu tiên tới } cuối cùng */
+function parseJSONLoose(text){
+  const s = text.replace(/^\s*```(?:json)?/i, '').replace(/```\s*$/, '').trim();
+  try { return JSON.parse(s); } catch(e){ const a = s.indexOf('{'), b = s.lastIndexOf('}'); if (a >= 0 && b > a) return JSON.parse(s.slice(a, b + 1)); throw e; }
+}
+const GEM = {
+  proxy: false, orProxy: false,
+  /* mặc định: model văn bản nhẹ, BẬT tạo ảnh bằng model rẻ nhất (có tính phí, chỉ trừ tiền khi người dùng bấm nút tạo ảnh).
+     Cài đặt lưu từ bản cũ được chuyển sang mặc định mới, giữ lại key, nhà cung cấp và model văn bản. */
+  cfg(){
+    const saved = store.get('tt_gem', {}) || {};
+    const base = {provider:'gemini', key:'', orKey:'', on:true, text:GEM_TEXT_MODELS[0], image:'gemini-3.1-flash-lite-image', orText:OR_TEXT_MODELS[0], orImage:OR_IMAGE_MODELS[0], v:3};
+    if (saved.v >= 3) return Object.assign(base, saved);
+    const keep = saved.v ? {provider:saved.provider || 'gemini', text:saved.text || base.text, orKey:saved.orKey || '', orText:saved.orText || base.orText} : {};
+    return Object.assign(base, keep, {key:saved.key || '', on:saved.on !== false});
+  },
+  isOR(c = GEM.cfg()){ return c.provider === 'openrouter'; },
+  name(){ return GEM.isOR() ? 'OpenRouter' : 'Gemini'; },
+  server(){ const c = GEM.cfg(); return GEM.isOR(c) ? !c.orKey && GEM.orProxy : !c.key && GEM.proxy; },
+  imageOn(){ const c = GEM.cfg(); return GEM.live() && (GEM.isOR(c) ? c.orImage : c.image) !== 'off'; },
+  save(c){ store.set('tt_gem', Object.assign(c, {v:3})); window.__aiBrand = GEM.name(); },
+  live(){ const c = GEM.cfg(); return c.on && (GEM.isOR(c) ? !!c.orKey || GEM.orProxy : !!c.key || GEM.proxy); },
+  async probe(){
+    if (!/^https?:$/.test(location.protocol)) return;
+    await Promise.all([['/api/gemini', 'proxy'], ['/api/openrouter', 'orProxy']].map(async ([u, k]) => {
+      try { const r = await fetch(u); if (r.ok){ const j = await r.json(); GEM[k] = !!j.hasKey; } } catch(e){}
+    }));
+  },
+  /* kind: 'text' (văn bản + đọc ảnh) | 'image' (tạo / sửa ảnh). Trả về object JSON, chuỗi, hoặc {image:dataURL, text}. */
+  async gen(kind, parts, opts = {}){
+    if (GEM.isOR()) return GEM.genOR(kind, parts, opts);
+    const {json = false, temp} = opts;
+    const c = GEM.cfg(), model = kind === 'image' ? c.image : c.text;
+    if (kind === 'image' && model === 'off') throw Object.assign(new Error('image generation off'), {code:'image-off'});
+    const body = {contents:[{role:'user', parts}], generationConfig:{}};
+    if (json) body.generationConfig.responseMimeType = 'application/json';
+    if (kind === 'image') body.generationConfig.responseModalities = ['TEXT', 'IMAGE'];
+    if (temp != null) body.generationConfig.temperature = temp;
+    const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), kind === 'image' ? 120000 : 45000);
+    try {
+      const r = c.key
+        ? await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`,
+            {method:'POST', signal:ctl.signal, headers:{'content-type':'application/json', 'x-goog-api-key':c.key}, body:JSON.stringify(body)})
+        : await fetch('/api/gemini', {method:'POST', signal:ctl.signal, headers:{'content-type':'application/json'}, body:JSON.stringify({model, body})});
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok){
+        const msg = (j.error && j.error.message) || 'HTTP ' + r.status;
+        throw Object.assign(new Error(msg), {code: r.status === 429 || /quota|RESOURCE_EXHAUSTED/i.test(msg) ? 'quota' : r.status});
+      }
+      const out = (j.candidates && j.candidates[0] && j.candidates[0].content && j.candidates[0].content.parts) || [];
+      const text = out.filter(p => p.text && !p.thought).map(p => p.text).join('\n').trim();
+      const pic = out.map(p => p.inlineData || p.inline_data).find(Boolean);
+      if (kind === 'image'){
+        if (!pic) throw new Error(text || (j.promptFeedback && j.promptFeedback.blockReason) || 'no image returned');
+        return {image:`data:${pic.mimeType || pic.mime_type || 'image/png'};base64,${pic.data}`, text};
+      }
+      if (!text) throw new Error((j.promptFeedback && j.promptFeedback.blockReason) || 'empty response');
+      return json ? parseJSONLoose(text) : text;
+    } catch(e){ throw e.name === 'AbortError' ? new Error('timeout') : e; }
+    finally { clearTimeout(timer); }
+  },
+  /* OpenRouter (API kiểu OpenAI): part văn bản/ảnh → content, ảnh trả về nằm trong message.images */
+  async genOR(kind, parts, {json = false, temp} = {}){
+    const c = GEM.cfg(), model = kind === 'image' ? c.orImage : c.orText;
+    if (kind === 'image' && model === 'off') throw Object.assign(new Error('image generation off'), {code:'image-off'});
+    const content = parts.map(p => p.text != null ? {type:'text', text:p.text}
+      : {type:'image_url', image_url:{url:`data:${p.inlineData.mimeType};base64,${p.inlineData.data}`}});
+    const body = {messages:[{role:'user', content}]};
+    if (kind === 'image') Object.assign(body, {model, modalities:['image', 'text']});
+    else body.models = [...new Set([model, ...OR_TEXT_MODELS])].filter(orFree).slice(0, 3);
+    if (temp != null) body.temperature = temp;
+    const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), kind === 'image' ? 120000 : 60000);
+    try {
+      const headers = {'content-type':'application/json', 'X-Title':'T&T demo'};
+      if (/^https?:$/.test(location.protocol)) headers['HTTP-Referer'] = location.origin;
+      const r = c.orKey
+        ? await fetch('https://openrouter.ai/api/v1/chat/completions', {method:'POST', signal:ctl.signal, headers:Object.assign(headers, {Authorization:'Bearer ' + c.orKey}), body:JSON.stringify(body)})
+        : await fetch('/api/openrouter', {method:'POST', signal:ctl.signal, headers:{'content-type':'application/json'}, body:JSON.stringify({body})});
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || j.error){
+        const e = j.error || {}, raw = e.metadata && e.metadata.raw ? ` (${String(e.metadata.raw).slice(0, 120)})` : '';
+        const code = r.status === 402 || e.code === 402 ? 'credit' : r.status === 429 || e.code === 429 ? 'quota' : r.status;
+        throw Object.assign(new Error((e.message || 'HTTP ' + r.status) + raw), {code});
+      }
+      const msg = (j.choices && j.choices[0] && j.choices[0].message) || {};
+      const text = (typeof msg.content === 'string' ? msg.content : (msg.content || []).map(x => x.text || '').join('')).trim();
+      if (kind === 'image'){
+        const url = msg.images && msg.images[0] && msg.images[0].image_url && msg.images[0].image_url.url;
+        if (!url) throw new Error(text || 'no image returned');
+        return {image:url, text};
+      }
+      if (!text) throw new Error('empty response');
+      return json ? parseJSONLoose(text) : text;
+    } catch(e){ throw e.name === 'AbortError' ? new Error('timeout') : e; }
+    finally { clearTimeout(timer); }
+  },
+  /* ảnh (URL Unsplash, blob: hoặc data:) → part inlineData, thu nhỏ còn tối đa `max` px để gửi nhẹ */
+  async img(src, max = 1024){
+    const blob = await (await fetch(src)).blob();
+    const bmp = await createImageBitmap(blob), k = Math.min(1, max / Math.max(bmp.width, bmp.height));
+    const cv = document.createElement('canvas'); cv.width = Math.round(bmp.width * k); cv.height = Math.round(bmp.height * k);
+    cv.getContext('2d').drawImage(bmp, 0, 0, cv.width, cv.height);
+    return {inlineData:{mimeType:'image/jpeg', data:cv.toDataURL('image/jpeg', .86).split(',')[1]}};
+  },
+  langLine(){ return state.lang === 'vi' ? 'Write all user-facing text in Vietnamese.' : 'Write all user-facing text in English.'; },
+};
+window.__aiBrand = GEM.name();
+
+const unsplash = (id, w = 1024, h = w) => `https://images.unsplash.com/photo-${id}?w=${w}&h=${h}&fit=crop&auto=format&q=80`;
+
+/* ---------- Gemini: cài đặt + nối vào Đăng từ 1 ảnh / AI Studio / RFQ / Hỏi AI ---------- */
+const imgSrc = (id, w = 900) => /^(data:|blob:|https?:)/.test(id) ? id : unsplash(id, w);
+const enName = id => I18N.en['p.' + id] || (PRODUCTS[id] && PRODUCTS[id].name && PRODUCTS[id].name.en) || t('p.' + id);
+const gemPill = () => { const live = GEM.live();
+  return `<button class="gem-pill ${live ? 'on' : ''}" data-action="gemOpen" title="${t('gem.title')}">${ic('spark')}${live ? `${GEM.name()}${GEM.server() ? ' · server' : ''}` : t('gem.mock')}</button>`; };
+const gemFail = e => e.code === 'quota' ? notify({type:'error', title:t('gem.quotaT'), msg:`${t('gem.quota')} ${t('gem.fallback')}`, ms:7000})
+  : e.code === 'credit' ? notify({type:'error', title:t('gem.creditT'), msg:`${t('gem.credit')} ${t('gem.fallback')}`, ms:7000})
+  : e.code === 'image-off' ? notify({type:'info', title:t('gem.imgOffOpt'), msg:t('gem.imgOff'), ms:6000})
+  : notify({type:'error', title:t('gem.errT'), msg:`${esc(String(e.message || e).slice(0, 160))} · ${t('gem.fallback')}`, ms:6000});
+const modelOpts = (list, v, off) => (off ? `<option value="off" ${v === 'off' ? 'selected' : ''}>${off}</option>` : '') + [...new Set([...(v && v !== 'off' ? [v] : []), ...list])].map(m => `<option ${m === v ? 'selected' : ''}>${esc(m)}</option>`).join('');
+function openGem(note = ''){
+  const c = GEM.cfg(), or = GEM.isOR(c);
+  dialogX({icon:'spark', tone:'info', wide:true, title:t('gem.title'), ok:t('gem.save'), okIcon:'check',
+    body:`${note ? `<div class="alert info">${ic('info')}<span>${note}</span></div>` : ''}<p>${t('gem.sub')}</p>
+      <div class="field"><span class="label">${t('gem.prov')}</span>
+        <div class="segmented seg-full" id="gemProv">${[['gemini', 'Google Gemini'], ['openrouter', 'OpenRouter']].map(([k, l]) => `<button type="button" class="${(or ? 'openrouter' : 'gemini') === k ? 'active' : ''}" data-action="gemProv" data-k="${k}">${l}</button>`).join('')}</div></div>
+      <div class="gem-prov" data-p="gemini" ${or ? 'hidden' : ''}>
+        <div class="alert info">${ic('info')}<span>${t('gem.freeTip')}</span></div>
+        ${GEM.proxy ? `<div class="alert success">${ic('okCircle')}<span>${t('gem.proxyOn')}</span></div>` : ''}
+        <div class="field"><label class="label" for="gemKey">${t('gem.key')}</label>
+          <input class="input" id="gemKey" type="password" autocomplete="off" spellcheck="false" placeholder="AIza…" value="${esc(c.key)}">
+          <a class="caption gem-link" href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">${t('gem.getKey')} ↗</a></div>
+        <div class="two"><div class="field"><label class="label" for="gemText">${t('gem.text')}</label><select class="select" id="gemText">${modelOpts(GEM_TEXT_MODELS, c.text)}</select></div>
+          <div class="field"><label class="label" for="gemImage">${t('gem.image')}</label><select class="select" id="gemImage">${modelOpts(GEM_IMAGE_MODELS, c.image, t('gem.imgOffOpt'))}</select></div></div>
+        <span class="caption">${t('gem.imgCost')}</span>
+      </div>
+      <div class="gem-prov" data-p="openrouter" ${or ? '' : 'hidden'}>
+        <div class="alert info">${ic('info')}<span>${t('gem.orTip')}</span></div>
+        ${GEM.orProxy ? `<div class="alert success">${ic('okCircle')}<span>${t('gem.orProxyOn')}</span></div>` : ''}
+        <div class="field"><label class="label" for="orKey">${t('gem.orKey')}</label>
+          <input class="input" id="orKey" type="password" autocomplete="off" spellcheck="false" placeholder="sk-or-v1-…" value="${esc(c.orKey)}">
+          <a class="caption gem-link" href="https://openrouter.ai/keys" target="_blank" rel="noopener">${t('gem.orGetKey')} ↗</a></div>
+        <div class="two"><div class="field"><label class="label" for="orText">${t('gem.orText')}</label><select class="select" id="orText">${modelOpts(OR_TEXT_MODELS, c.orText)}</select></div>
+          <div class="field"><label class="label" for="orImage">${t('gem.orImage')}</label><select class="select" id="orImage">${modelOpts(OR_IMAGE_MODELS, c.orImage, t('gem.imgOffOR'))}</select></div></div>
+      </div>
+      <label class="check"><input type="checkbox" id="gemOn" ${c.on ? 'checked' : ''}><span>${t('gem.on')}</span></label>
+      <div class="gem-uses"><b>${t('gem.usesS')}</b>${[1,2,3,4].map(i => `<span>${ic('check')}${t('gem.useS' + i)}</span>`).join('')}</div>
+      <button type="button" class="btn btn-neutral btn-sm" data-action="gemTest" style="align-self:flex-start">${ic('spark')}${t('gem.test')}</button>
+      <p class="caption">${t('gem.privacy')}</p>`,
+    onOk(root){ GEM.save(readGemForm(root)); notify({title:t('gem.saved')}); setTimeout(renderShell, 0); }});
+}
+function readGemForm(root = document){
+  const c = GEM.cfg(), v = id => root.querySelector('#' + id), val = (id, d) => (v(id) ? v(id).value : d);
+  const prov = root.querySelector('#gemProv .active');
+  return Object.assign(c, {provider:prov ? prov.dataset.k : c.provider, key:val('gemKey', c.key).trim(), text:val('gemText', c.text), image:val('gemImage', c.image),
+    orKey:val('orKey', c.orKey).trim(), orText:val('orText', c.orText), orImage:val('orImage', c.orImage), on:v('gemOn') ? v('gemOn').checked : c.on});
+}
+
+/* Đăng từ 1 ảnh (B7): đọc ảnh → điền form */
+async function pdAiGem(src){
+  const d = state.pd; if (!d) return;
+  d.aiBusy = true; pdRerender();
+  let part = null;
+  try {
+    part = await GEM.img(src, 900);
+    const r = await GEM.gen('text', [{text:`You are the listing assistant of "Hanoi Ceramic House", a Vietnamese shop selling ceramic homeware. Look at the product photo and return JSON:
+{"name_vi","name_en","desc_vi","desc_en" (2-3 factual sentences each, at least 120 characters, no exaggeration), "category": one of ["cups","bowls","vases","planters"], "variant_vi","variant_en" (glaze or colour name), "price_vnd": suggested retail price in VND (number), "weight_kg": packed weight (number), "fragile": boolean, "titles": {"shopee","tiktok","lazada"} (Vietnamese titles in each marketplace's style, under 100 characters)}.`}, part], {json:true});
+    if (state.pd !== d) return;
+    const img = 'data:image/jpeg;base64,' + part.inlineData.data;
+    Object.assign(d, {ai:true, aiGem:true, imgs:[img], cat:CATS.includes(r.category) ? r.category : 'cups', price:(+r.price_vnd || 0) / RATE, old:0,
+      weight:+r.weight_kg || .5, fragile:r.fragile !== false, name:{vi:r.name_vi || '', en:r.name_en || ''}, desc:{vi:r.desc_vi || '', en:r.desc_en || ''},
+      variants:[{k:(state.lang === 'vi' ? r.variant_vi : r.variant_en) || t('pa.var'), img, stock:20, sku:''}], aiTitles:r.titles || null, errs:{}});
+    markDone('pAiList'); notify({type:'info', title:t('n.paDone'), msg:t('n.paDoneSub')});
+  } catch(e){
+    gemFail(e);
+    if (state.pd === d){ pdAiFill(); if (part && !/unsplash/.test(src)) d.imgs[0] = d.variants[0].img = 'data:image/jpeg;base64,' + part.inlineData.data; }
+  } finally { if (state.pd === d){ d.aiBusy = false; pdRerender(); } }
+}
+
+/* AI Studio (B9): 4 ảnh bối cảnh thật bằng model tạo ảnh, chạy song song */
+async function studioGem(S){
+  const P = PRODUCTS[S.pid], part = await GEM.img(imgSrc(P.img), 900), name = enName(S.pid);
+  S.gemImgs = {};
+  /* gọi lần lượt từng ảnh: tránh vượt giới hạn/phút, gặp lỗi hết lượt thì dừng ngay, ảnh còn lại dùng bản ghép nhanh */
+  for (const g of SEGS){
+    try { S.gemImgs[g.k] = (await GEM.gen('image', [{text:`Create a realistic lifestyle e-commerce photo in portrait 4:5. Place this exact product (attached photo: ${name}) in this scene: ${I18N.en['st.scene.' + g.k]}, styled for ${I18N.en['st.seg.' + g.k]}. Keep the product's shape, colour, glaze, pattern and any logo 100% identical: do not beautify or redesign it, and keep true real-world scale. Natural light, soft realistic shadows, no text, no watermark.`}, part])).image; }
+    catch(e){ gemFail(e); break; }
+  }
+}
+/* Video (B3): kịch bản + 3 câu mở đầu */
+async function videoGem(S){
+  const P = PRODUCTS[S.pid];
+  const r = await GEM.gen('text', [{text:`Write a 15-second vertical sales video script for "${enName(S.pid)}" from Hanoi Ceramic House (handmade ceramics, ${P.sold} sold, rating 4.6). Return JSON {"script": [4 short voice-over lines for 0-3s hook, 3-8s benefits, 8-12s social proof, 12-15s call to action], "hooks": [{"text": alternative opening line with its angle, "ctr": estimated CTR % as a number}] (3 items)}. Keep claims factual. ${GEM.langLine()}`}], {json:true});
+  if (Array.isArray(r.script) && r.script.length) S.gemScript = r.script.slice(0, 4).map(String);
+  if (Array.isArray(r.hooks) && r.hooks.length) S.gemHooks = r.hooks.slice(0, 3);
+}
+/* RFQ (A2): soạn tin tiếng Trung + bản dịch */
+async function rfqGem(S){
+  const Q = SRC_Q[S.q], rows = srcRows(S.q).slice(0, 3);
+  const r = await GEM.gen('text', [{text:`Draft a concise B2B quote request (RFQ) to Chinese ceramic suppliers (${rows.map(x => x.n).join(', ')}) from Hanoi Ceramic House, Vietnam, for ${S.qty} units of "${I18N.en[Q.k]}". Ask for tiered unit price incl. packaging, MOQ, lead time, custom glaze and logo, freight to Pingxiang (Guangxi) border, and samples. Return JSON {"zh": message in Simplified Chinese, "tr": faithful translation}. ${state.lang === 'vi' ? 'The translation must be in Vietnamese.' : 'The translation must be in English.'}`}], {json:true});
+  return {zh:String(r.zh || ''), tr:String(r.tr || '')};
+}
+/* Hỏi AI: câu hỏi tự do → Gemini trả lời từ số liệu shop */
+async function askGem(text){
+  markDone('cop'); state.chat.push({me:true, text}); state.chat.push({typing:true}); paintChat();
+  const ctx = {shop:t('shop.name'), today:'2026-10-15', currency_note:'money values are USD; 1 USD = 25,000 VND',
+    kpis_last7:KPIS['7'], kpis_last30:KPIS['30'],
+    products:Object.entries(PRODUCTS).map(([id, P]) => ({name:t('p.' + id), price_usd:P.price, stock:P.stock, sold_30d:P.sold30, listed:P.on})),
+    orders:{new:countSt('new'), packing:countSt('packing'), shipping:countSt('shipping'), cancel_requests:countSt('cancelReq'), delivered:countSt('delivered')},
+    review_topics:TOPICS.map(([k, s, n]) => ({topic:k, sentiment:s, mentions:n}))};
+  try {
+    const a = await GEM.gen('text', [{text:`You are the AI copilot inside T&T Seller Center. Answer the shop owner's question in at most ~120 words, using only the data below; say clearly when the data can't answer it. Use short "- " bullets when listing. Show money in ${state.lang === 'vi' ? 'VND' : 'USD'}. ${GEM.langLine()}
+Data: ${JSON.stringify(ctx)}
+Question: ${text}`}]);
+    state.chat.pop(); state.chat.push({gem:a});
+  } catch(e){ state.chat.pop(); state.chat.push({q:'x'}); gemFail(e); }
+  paintChat();
+}
+const mdLite = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').split('\n').map(l => /^\s*[-*•]\s+/.test(l) ? `<span class="gem-li">${l.replace(/^\s*[-*•]\s+/, '')}</span>` : l).join('<br>').replace(/<br>(<span class="gem-li">)/g, '$1').replace(/(<\/span>)<br>/g, '$1');
+
+/* =========================================================
+   6i. AI LAB — Studio ảnh & video (S13) · Nguồn hàng AI (S14) · Radar giá & hàng nhái (S15)
+   Mô phỏng offline: không gọi API, các bước "AI" là animation chạy trên dữ liệu mẫu.
+   Mã ý tưởng (A1, B9…) khớp với tài liệu "Ý tưởng AI siêu đột phá".
+   ========================================================= */
+const hsh = s => [...String(s)].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+const CNY = 7.1; // 1 USD ≈ 7,1 CNY (tham khảo)
+const aiLab = () => `<div class="card ai-lab" id="aiLab"><div class="card-h"><div class="ch-t"><h3>${ic('spark')}${t('lab.title')}</h3><span class="caption">${t('lab.sub')}</span></div>
+    <div class="btn-row">${gemPill()}<button class="btn btn-neutral btn-sm" data-action="gemOpen">${ic('spark')}${t('gem.btn')}</button></div></div>
+  <div class="lab-grid">${[['product/new','image','lab.list'], ['studio','image','lab.studio'], ['sourcing','search','lab.src'], ['pricing','trendUp','lab.price']].map(([go, icn, k]) =>
+    `<button class="lab-i" data-go="${go}"><span class="ai-ic sm">${ic(icn)}</span><span class="grow"><b>${t(k)}</b><span>${t(k + 'S')}</span></span>${ic('next')}</button>`).join('')}</div></div>`;
+const aiNote = k => `<div class="alert info ai-note">${ic('info')}<span>${t(k)}</span></div>`;
+
+/* ---------- S13 · AI Studio: ảnh bối cảnh theo nhóm khách (B9) + video bán hàng (B3) ---------- */
+const SEGS = [
+  {k:'office', room:'1586023492125-27b2c045efd7', at:[36, 70]},
+  {k:'mom',    room:'1505693416388-ac5ce068fe85', at:[64, 72]},
+  {k:'genz',   room:'1600210492486-724fe5c67fb0', at:[46, 74]},
+  {k:'gift',   room:'1555041469-a586c61ea9bc',    at:[30, 76]},
+];
+const FID = ['color','glaze','logo','scale','mat'];
+/* sản phẩm màu sáng sẽ "biến mất" khi multiply lên nền → giữ blend thường */
+const LIGHT_V = ['v.white','v.sand'];
+function stState(){
+  if (!state.st) state.st = {pid:'mug', tab:'img', gen:false, busy:false, fid:new Set(), label:true, pub:false, vGen:false, vBusy:false, voice:'clone', ab:false, vLabel:true};
+  if (!PRODUCTS[state.st.pid]) state.st.pid = Object.keys(PRODUCTS)[0];
+  return state.st;
+}
+const sceneImg = (id, w = 520) => `<img class="sc-bg" src="https://images.unsplash.com/photo-${id}?w=${w}&h=${Math.round(w * 1.2)}&fit=crop&auto=format&q=70" alt="" loading="lazy" onerror="this.removeAttribute('src')">`;
+function studioPageHTML(){
+  const S = stState(), P = PRODUCTS[S.pid];
+  const picker = `<div class="st-pick">${Object.entries(PRODUCTS).filter(([, x]) => x.on).map(([id, x]) => `<button class="st-p ${id === S.pid ? 'active' : ''}" data-action="stPid" data-v="${id}"><span class="thumb">${photo(x.img, 96)}</span><span class="ellipsis">${esc(t('p.' + id))}</span></button>`).join('')}</div>`;
+  const tabs = `<div class="segmented" id="stTabs" role="group">${['img','video'].map(k => `<button class="${S.tab === k ? 'active' : ''}" data-action="stTab" data-v="${k}">${ic(k === 'img' ? 'image' : 'video')}${t('st.tab.' + k)}</button>`).join('')}</div>`;
+  return `<div class="page-h"><div class="ph-t"><span class="eyebrow">${t('lab.eyebrow')} · B9 · B3 ${gemPill()}</span><h1 class="d-page">${t('nav.studio')}</h1><p>${t('st.sub')}</p></div>${tabs}</div>
+    <div class="card"><div class="card-h"><div class="ch-t"><h3>${t('st.pickT')}</h3><span class="caption">${t('st.pickS')}</span></div></div>${picker}</div>
+    ${S.tab === 'img' ? stImgHTML(S, P) : stVideoHTML(S, P)}`;
+}
+function stImgHTML(S, P){
+  const all = S.fid.size === FID.length;
+  const scene = (g, i) => `<div class="scene ${S.busy ? 'busy' : ''}" style="--d:${i * .12}s">
+      <div class="sc-art">${S.gemImgs && S.gemImgs[g.k] ? `<img class="sc-bg" src="${S.gemImgs[g.k]}" alt="">` : `${sceneImg(g.room)}<span class="sc-prod ${LIGHT_V.includes(P.variants[0] && P.variants[0].k) ? 'light' : ''}" style="left:${g.at[0]}%;top:${g.at[1]}%">${photo(P.img, 240)}</span>`}
+        ${S.label ? `<span class="sc-lbl">${ic('spark')}${S.gemImgs && S.gemImgs[g.k] ? 'Gemini · ' : ''}${t('st.aiLbl')}</span>` : ''}<span class="sc-shimmer"></span></div>
+      <div class="sc-b"><b>${t('st.seg.' + g.k)}</b><span class="caption">${t('st.scene.' + g.k)}</span>
+        <span class="sc-ad">${ic('tag')}${t('st.ad.' + g.k)}</span></div></div>`;
+  return `<div class="grid g-21 st-grid">
+    <div class="card" id="stGen"><div class="card-h"><div class="ch-t"><h3>${t('st.genT')}</h3><span class="caption">${t('st.genS')}</span></div>
+        <button class="btn btn-ai btn-sm ${S.busy ? 'is-loading' : ''}" data-action="stGen">${ic('spark')}${S.gen ? t('st.regen') : t('st.gen')}</button></div>
+      ${S.gen || S.busy ? `<div class="scenes ${S.fresh ? 'fresh' : ''}">${SEGS.map(scene).join('')}</div>
+        <div class="st-keep">${ic('okCircle')}<span>${t('st.keep')}</span></div>`
+      : `<div class="st-empty"><span class="thumb lg">${photo(P.img, 200)}</span><div><b>${esc(t('p.' + S.pid))}</b><p class="caption">${t('st.emptyS')}</p></div></div>`}
+    </div>
+    <div class="col">
+      <div class="card" id="stFid"><div class="card-h"><div class="ch-t"><h3>${t('st.fidT')}</h3><span class="caption">${t('st.fidS')}</span></div>
+          <span class="badge ${all ? 'success' : 'warning'}">${S.fid.size}/${FID.length}</span></div>
+        ${FID.map(k => `<label class="check fid"><input type="checkbox" data-action="stFid" data-v="${k}" ${S.fid.has(k) ? 'checked' : ''} ${S.gen ? '' : 'disabled'}><span>${t('st.fid.' + k)}</span></label>`).join('')}
+        <button class="link-btn" data-action="stFidAll" ${S.gen ? '' : 'disabled'} style="align-self:flex-start;margin-top:4px">${t('st.fidAll')}</button>
+        <label class="check" style="margin-top:10px"><span class="switch"><input type="checkbox" data-action="stLabel" ${S.label ? 'checked' : ''}></span><span>${t('st.label')}</span></label>
+        <button class="btn btn-primary btn-sm btn-block" data-action="stPublish" ${S.gen && all && !S.pub ? '' : 'disabled'} style="margin-top:12px">${ic(S.pub ? 'check' : 'send')}${S.pub ? t('st.published') : t('st.publish')}</button>
+        ${S.gen && !all ? `<span class="caption" style="margin-top:6px">${t('st.needFid')}</span>` : ''}
+      </div>
+      ${aiNote('st.risk')}
+      <div class="card soft-card"><div class="card-h"><h3>${t('st.howT')}</h3></div><ol class="how">${[1,2,3,4].map(i => `<li>${t('st.how' + i)}</li>`).join('')}</ol></div>
+    </div></div>`;
+}
+const VOICES = ['clone','north','south'];
+function stScript(P, pid){
+  const name = t('p.' + pid), S = state.st;
+  if (S && S.pid === pid && S.gemScript) return S.gemScript.map((l, i) => [['0–3s', '3–8s', '8–12s', '12–15s'][i], l]);
+  return [['0–3s', t('st.v1', {p:name})], ['3–8s', t('st.v2')], ['8–12s', t('st.v3', {n:num(P.sold)})], ['12–15s', t('st.v4')]];
+}
+function stVideoHTML(S, P){
+  const sc = stScript(P, S.pid), imgs = (P.imgs && P.imgs.length ? P.imgs : [P.img]).slice(0, 3);
+  return `<div class="grid g-21 st-grid">
+    <div class="card"><div class="card-h"><div class="ch-t"><h3>${t('st.vT')}</h3><span class="caption">${t('st.vS')}</span></div>
+        <button class="btn btn-ai btn-sm ${S.vBusy ? 'is-loading' : ''}" data-action="stVidGen">${ic('spark')}${S.vGen ? t('st.regen') : t('st.vGen')}</button></div>
+      <div class="vid-wrap">
+        <div class="vid ${S.vGen ? 'play' : ''} ${S.vBusy ? 'busy' : ''}" id="stVid">
+          ${imgs.map((im, i) => `<span class="vf" style="--i:${i};--n:${imgs.length}">${photo(im, 480)}</span>`).join('')}
+          <span class="v-sub" id="vSub">${S.vGen ? esc(sc[0][1]) : t('st.vIdle')}</span>
+          ${S.vLabel ? `<span class="sc-lbl">${ic('spark')}${t('st.aiVid')}</span>` : ''}
+          <span class="v-bar"><i></i></span>
+          ${S.vBusy ? `<span class="v-busy"><span class="spin"></span>${t('st.vRender')}</span>` : ''}
+        </div>
+        <div class="vid-side">
+          <div class="field"><span class="label">${t('st.voice')}</span>
+            <div class="segmented seg-col" role="group">${VOICES.map(k => `<button class="${S.voice === k ? 'active' : ''}" data-action="stVoice" data-v="${k}">${t('st.voice.' + k)}</button>`).join('')}</div>
+            ${S.voice === 'clone' ? `<span class="caption">${t('st.cloneNote')}</span>` : ''}</div>
+          <div class="field"><span class="label">${t('st.script')}</span>
+            <ol class="script">${sc.map(([tm, l]) => `<li><span class="tnum">${tm}</span><span>${esc(l)}</span></li>`).join('')}</ol></div>
+          <label class="check"><span class="switch"><input type="checkbox" data-action="stVLabel" ${S.vLabel ? 'checked' : ''}></span><span>${t('st.vLabel')}</span></label>
+        </div>
+      </div>
+      ${S.vGen ? `<div class="ab" id="stAb"><div class="row-between"><b>${t('st.abT')}</b>${S.ab ? '' : `<button class="btn btn-neutral btn-sm" data-action="stAb">${ic('copy')}${t('st.ab')}</button>`}</div>
+        ${S.ab && S.gemHooks ? S.gemHooks.map((h, i) => `<div class="ab-r"><span class="badge ${i === 0 ? 'info' : 'outline'}">${String.fromCharCode(65 + i)}</span><span class="grow">${esc(h.text || '')}</span>${h.ctr ? `<span class="caption tnum">${t('st.abCtr', {n:h.ctr})}</span>` : ''}</div>`).join('')
+          : S.ab ? [1,2,3].map(i => `<div class="ab-r"><span class="badge ${i === 1 ? 'info' : 'outline'}">${String.fromCharCode(64 + i)}</span><span class="grow">${esc(t('st.ab' + i, {p:t('p.' + S.pid)}))}</span><span class="caption tnum">${t('st.abCtr', {n:[4.8, 3.9, 3.1][i - 1]})}</span></div>`).join('') : `<span class="caption">${t('st.abS')}</span>`}
+        <div class="btn-row"><button class="btn btn-primary btn-sm" data-action="stExport">${ic('send')}${t('st.export')}</button><button class="btn btn-neutral btn-sm" data-action="stExport" data-v="dl">${ic('download')}${t('st.download')}</button></div></div>` : ''}
+    </div>
+    <div class="col">${aiNote('st.vRisk')}
+      <div class="card soft-card"><div class="card-h"><h3>${t('st.howT')}</h3></div><ol class="how">${[1,2,3,4].map(i => `<li>${t('st.vh' + i)}</li>`).join('')}</ol></div></div>
+  </div>`;
+}
+let vidTimer = null;
+function playVideo(){
+  clearInterval(vidTimer);
+  const S = state.st, sc = stScript(PRODUCTS[S.pid], S.pid); let i = 0;
+  vidTimer = setInterval(() => {
+    const el = $('#vSub'); if (!el || !S.vGen){ clearInterval(vidTimer); return; }
+    i = (i + 1) % sc.length; el.textContent = sc[i][1]; el.classList.remove('in'); void el.offsetWidth; el.classList.add('in');
+  }, 2400);
+}
+
+/* ---------- S14 · Nguồn hàng AI: radar xu hướng (A4) → quét ảnh (A1) → giá vốn & mã HS (A6) → RFQ (A2) ---------- */
+const SRC_Q = [
+  {img:'1610701596007-11502861dcfa', k:'src.q1', base:9.2,  w:.9, sell:'cups'},
+  {img:'1612196808214-b8e1d6145a8c', k:'src.q2', base:14.5, w:.7, sell:'vase'},
+  {img:'1603199506016-b9a594b593c0', k:'src.q3', base:7.8,  w:.6, sell:'bowls'},
+];
+const TRENDS = [{q:0, g:182}, {q:1, g:96}, {q:2, g:64}];
+const SUPP = [
+  {plat:'1688',          n:'Jingdezhen Yuxin Ceramics', type:'factory', reg:'reg.jdz', yrs:9, ver:true,  m:1.00, moq:500, sales:3200, rep:41, lead:7,  port:2},
+  {plat:'1688',          n:'Chaozhou Fengxi Porcelain', type:'factory', reg:'reg.cz',  yrs:6, ver:true,  m:1.06, moq:300, sales:2100, rep:37, lead:5,  port:1},
+  {plat:'Yiwugo',        n:'Yiwu Homeline Trading',     type:'trading', reg:'reg.yw',  yrs:4, ver:false, m:1.22, moq:50,  sales:860,  rep:22, lead:3,  port:3},
+  {plat:'Alibaba',       n:'Dehua Kiln Craft Co.',      type:'factory', reg:'reg.dh',  yrs:12,ver:true,  m:1.14, moq:1000,sales:1400, rep:45, lead:12, port:2},
+  {plat:'Made-in-China', n:'Guangzhou Lumi Housewares', type:'trading', reg:'reg.gz',  yrs:3, ver:true,  m:1.31, moq:100, sales:540,  rep:18, lead:4,  port:1},
+];
+function srcState(){ if (!state.src) state.src = {q:null, busy:false, pick:0, qty:500, rfq:false}; return state.src; }
+function srcRows(q){
+  const Q = SRC_Q[q], rows = SUPP.map((s, i) => {
+    const p = +(Q.base * s.m).toFixed(2), sim = 97 - i * 3 - hsh(s.n + q) % 3;
+    return {...s, i, p, p2:+(p * .9).toFixed(2), sim};
+  });
+  const rng = f => { const v = rows.map(f), mn = Math.min(...v), mx = Math.max(...v); return x => mx === mn ? 1 : (f(x) - mn) / (mx - mn); };
+  const pN = rng(r => -r.p), tN = rng(r => r.yrs * 2 + (r.ver ? 10 : 0) + r.rep / 2), sN = rng(r => -r.lead), oN = rng(r => -r.port);
+  rows.forEach(r => r.score = Math.round((pN(r) * .4 + tN(r) * .3 + sN(r) * .2 + oN(r) * .1) * 100));
+  const origin = rows.filter(r => r.type === 'factory').sort((a, b) => a.p - b.p)[0];
+  rows.forEach(r => r.origin = r === origin);
+  return rows.sort((a, b) => b.score - a.score);
+}
+function landed(r, Q, qty){
+  const unit = r.p / CNY * (qty >= r.p2Qty ? .9 : 1), ship = Q.w * .78, svc = unit * .03;
+  const duty = (unit + ship) * .05, vat = (unit + ship + duty) * .10, cost = unit + ship + svc + duty + vat;
+  const minPrice = cost / (1 - .05) / (1 - .30);
+  return {unit, ship, svc, duty, vat, cost, minPrice};
+}
+function sourcingPageHTML(){
+  const S = srcState();
+  const trend = `<div class="card" id="srcTrend"><div class="card-h"><div class="ch-t"><h3>${ic('trendUp')}${t('src.trendT')}</h3><span class="caption">${t('src.trendS')}</span></div><span class="badge info">A4</span></div>
+    <div class="trends">${TRENDS.map(x => `<button class="trend" data-action="srcSample" data-i="${x.q}"><span class="thumb">${photo(SRC_Q[x.q].img, 96)}</span>
+      <span class="grow"><b>${t(SRC_Q[x.q].k)}</b><span class="tr-g">${ic('arrowUp')}+${x.g}% · ${t('src.trend7')}</span></span><span class="link-btn">${t('src.find')}${ic('next')}</span></button>`).join('')}</div></div>`;
+  const drop = `<div class="card" id="srcDrop"><div class="card-h"><div class="ch-t"><h3>${t('src.dropT')}</h3><span class="caption">${t('src.dropS')}</span></div><span class="badge info">A1</span></div>
+    <div class="src-drop">
+      <label class="drop" for="srcFile">${ic('image')}<b>${t('src.drop')}</b><span class="caption">${t('src.dropHint')}</span></label>
+      <input type="file" id="srcFile" accept="image/*" hidden>
+      <div class="src-samples"><span class="caption">${t('src.samples')}</span>${SRC_Q.map((q, i) => `<button class="thumb lg ${S.q === i ? 'on' : ''}" data-action="srcSample" data-i="${i}" title="${t(q.k)}">${photo(q.img, 160)}</button>`).join('')}</div>
+    </div></div>`;
+  let body = '';
+  if (S.q !== null){
+    const Q = SRC_Q[S.q], rows = srcRows(S.q), r = rows.find(x => x.i === S.pick) || rows[0], L = landed({...r, p2Qty:500}, Q, S.qty);
+    const mine = PRODUCTS[Q.sell], margin = mine ? (mine.price * .95 - L.cost) / mine.price * 100 : 0;
+    const head = `<div class="src-q"><span class="thumb lg">${S.up ? `<img src="${S.up}" alt="">` : photo(Q.img, 160)}</span><div class="grow"><span class="eyebrow">${t('src.detected')}</span><b>${t(Q.k)}</b>
+      <span class="caption">${t('src.found', {n:rows.length * 37, k:rows.length})}</span></div></div>`;
+    const row = x => `<button class="sp-row ${x.i === r.i ? 'on' : ''}" data-action="srcPick" data-i="${x.i}">
+        <span class="sp-main"><span class="sp-plat">${x.plat}</span><b>${x.n}</b>
+          <span class="sp-tags"><span class="badge ${x.type === 'factory' ? 'success' : 'neutral'}">${t('src.t.' + x.type)}</span>${x.ver ? `<span class="badge info">${ic('check')}${t('src.ver')}</span>` : ''}${x.origin ? `<span class="badge warning">${ic('star')}${t('src.origin')}</span>` : ''}</span>
+          <span class="caption">${ic('globe')}${t(x.reg)} · ${t('src.yrs', {n:x.yrs})}</span></span>
+        <span class="sp-k"><span class="caption">${t('src.price')}</span><b class="tnum">¥${x.p.toFixed(2)}</b><span class="caption tnum">≥500: ¥${x.p2.toFixed(2)}</span></span>
+        <span class="sp-k"><span class="caption">MOQ</span><b class="tnum">${num(x.moq)}</b><span class="caption tnum">${t('src.lead', {n:x.lead})}</span></span>
+        <span class="sp-k"><span class="caption">${t('src.sales')}</span><b class="tnum">${num(x.sales)}</b><span class="caption tnum">${t('src.rep', {n:x.rep})}</span></span>
+        <span class="sp-score"><span class="ring" style="--p:${x.score}"><b class="tnum">${x.score}</b></span><span class="caption tnum">${t('src.sim', {n:x.sim})}</span></span>
+      </button>`;
+    const line = (k, v, strong) => `<div class="lc-r ${strong ? 'tot' : ''}"><span>${t(k)}</span><b class="tnum">${money(v)}</b></div>`;
+    body = `<div class="card ${S.busy ? 'src-busy' : ''}" id="srcRes">
+        <div class="card-h"><div class="ch-t"><h3>${t('src.resT')}</h3><span class="caption">${t('src.resS')}</span></div></div>
+        ${head}
+        ${S.busy ? `<div class="src-wait"><span class="spin"></span>${t('src.scanning')}</div>` : `<div class="sp-list">${rows.map(row).join('')}</div>`}
+      </div>
+      ${S.busy ? '' : `<div class="grid g-2">
+        <div class="card" id="srcCost"><div class="card-h"><div class="ch-t"><h3>${t('src.costT')}</h3><span class="caption">${esc(r.n)}</span></div><span class="badge info">A6</span></div>
+          <div class="field"><span class="label">${t('src.qty')}</span><div class="segmented" role="group">${[300, 500, 1000].map(q => `<button class="${S.qty === q ? 'active' : ''}" data-action="srcQty" data-v="${q}">${num(q)}</button>`).join('')}</div></div>
+          <div class="hs">${ic('spark')}<div><b>HS 6912.00</b><span class="caption">${t('src.hs')}</span></div><span class="badge outline">${t('src.conf', {n:92})}</span></div>
+          <div class="lc">${line('src.c.unit', L.unit)}${line('src.c.ship', L.ship)}${line('src.c.svc', L.svc)}${line('src.c.duty', L.duty)}${line('src.c.vat', L.vat)}${line('src.c.cost', L.cost, true)}</div>
+          <div class="lc-out"><div><span class="caption">${t('src.minPrice')}</span><b class="tnum">${money(L.minPrice)}</b></div>
+            ${mine ? `<div><span class="caption">${t('src.margin', {p:t('p.' + Q.sell)})}</span><b class="tnum" style="color:${margin >= 30 ? 'var(--success)' : 'var(--warning)'}">${dec(margin)}%</b></div>` : ''}</div>
+          <span class="caption">${t('src.costNote')}</span></div>
+        <div class="card" id="srcRfq"><div class="card-h"><div class="ch-t"><h3>${t('src.rfqT')}</h3><span class="caption">${t('src.rfqS')}</span></div><span class="badge info">A2</span></div>
+          <ol class="how">${[1,2,3].map(i => `<li>${t('src.rfq' + i)}</li>`).join('')}</ol>
+          ${S.rfq ? `<div class="alert success">${ic('okCircle')}<span>${t('src.rfqSent')}</span></div>`
+            : `<button class="btn btn-ai btn-sm" data-action="srcRfq" style="align-self:flex-start">${ic('spark')}${t('src.rfqBtn')}</button>`}
+          ${aiNote('src.note')}</div>
+      </div>`}`;
+  } else body = `<div class="card"><div class="placeholder"><span class="ph-icon ph-ic">${ic('search')}</span><h3 class="h-lg">${t('src.emptyT')}</h3><p class="caption" style="max-width:460px">${t('src.emptyS')}</p></div></div>`;
+  return `<div class="page-h"><div class="ph-t"><span class="eyebrow">${t('lab.eyebrow')} · A1 · A2 · A4 · A6 ${gemPill()}</span><h1 class="d-page">${t('nav.sourcing')}</h1><p>${t('src.sub')}</p></div></div>
+    <div class="grid g-2">${trend}${drop}</div>${body}`;
+}
+function srcScan(i, up){
+  const S = srcState(); Object.assign(S, {q:i, busy:true, pick:-1, rfq:false, up:up || ''}); renderPage();
+  setTimeout(() => { if (state.route !== 'sourcing') return S.busy = false; S.busy = false; S.pick = srcRows(i)[0].i; markDone('srcScan'); renderPage(); $('#srcRes')?.scrollIntoView({behavior:'smooth', block:'start'}); }, 2000 * (AUTO.on ? AUTO.speed : 1));
+}
+
+/* ---------- S15 · Radar giá đa sàn (B1) + phát hiện trộm ảnh / hàng nhái (B2) ---------- */
+const COST = {mug:13.2, cups:27, bowls:22.5, plates:36, vase:31, planter:18};
+const COMP = {
+  mug:   [['Shopee','Gốm Mộc Studio',21.9,0,'promo.flash'], ['TikTok Shop','Nhà Gốm Xinh',23.5,1.2,''], ['Lazada','Bat Trang Home',25.9,0,'']],
+  cups:  [['Shopee','Tea Corner VN',47.5,0,''], ['TikTok Shop','Gốm Mộc Studio',51.0,1.2,'promo.v10'], ['Website','teaware.vn',52.0,2,'']],
+  vase:  [['Shopee','Decor Nhà Mây',49.9,0,'promo.flash'], ['Lazada','Bat Trang Home',58.0,0,''], ['TikTok Shop','Living Muse',54.5,1.2,'']],
+  bowls: [['Shopee','Gốm Mộc Studio',41.0,0,''], ['Lazada','Kitchen Lab',44.9,0,'']],
+};
+const FAKES = [
+  {shop:'decor.house88', ch:'Shopee',      p:'mug',  sim:99, cls:'stolen', price:18.9, when:'fk.w1'},
+  {shop:'HC Official Đà Nẵng', ch:'TikTok Shop', p:'cups', sim:100, cls:'auth', price:49.0, when:'fk.w2'},
+  {shop:'gomxinh.vn',    ch:'Lazada',      p:'vase', sim:87, cls:'fake',   price:29.5, when:'fk.w3'},
+];
+function prState(){ if (!state.prc) state.prc = {th:10, done:{}, rep:{}}; return state.prc; }
+function suggestPrice(id){
+  const P = PRODUCTS[id], comps = COMP[id] || [], low = Math.min(...comps.map(c => c[2] + c[3]));
+  const floor = COST[id] / .95 / (1 - .25);
+  const s = Math.max(floor, Math.min(P.price, low + .5));
+  return {low, floor, s:Math.round(s * 10) / 10};
+}
+function pricingPageHTML(){
+  const S = prState(), ids = Object.keys(COMP).filter(id => PRODUCTS[id]);
+  const alerts = ids.filter(id => suggestPrice(id).low < PRODUCTS[id].price * (1 - S.th / 100) && !S.done[id]).length;
+  const row = id => {
+    const P = PRODUCTS[id], sg = suggestPrice(id), hit = sg.low < P.price * (1 - S.th / 100), d = S.done[id];
+    return `<div class="pr-row ${hit && !d ? 'hit' : ''}">
+      <div class="pr-p"><span class="thumb">${photo(P.img, 96)}</span><span class="grow"><b>${esc(t('p.' + id))}</b><span class="caption">${t('pr.mine')} <b class="tnum">${money(P.price)}</b> · ${t('pr.cost')} ${money(COST[id])}</span></span></div>
+      <div class="pr-comps">${COMP[id].map(([ch, shop, price, ship, promo]) => `<span class="pc ${price + ship < P.price * (1 - S.th / 100) ? 'low' : ''}"><span class="caption">${ch}</span><b class="tnum">${money(price)}</b><span class="caption">${esc(shop)}${ship ? ` · +${money(ship)} ship` : ''}${promo ? ` · ${t(promo)}` : ''}</span></span>`).join('')}</div>
+      <div class="pr-ai">${d ? `<span class="badge ${d === 'apply' ? 'success' : 'neutral'}">${ic('check')}${t(d === 'apply' ? 'pr.applied' : 'pr.kept')}</span>`
+        : hit ? `<span class="caption">${ic('spark')}${t('pr.sugg')}</span><b class="tnum">${money(sg.s)}</b><span class="caption">${t(sg.s <= sg.floor + .01 ? 'pr.whyFloor' : 'pr.why', {f:money(sg.floor)})}</span>
+          <span class="btn-row"><button class="btn btn-primary btn-sm" data-action="prApply" data-id="${id}">${t('pr.apply')}</button><button class="btn btn-neutral btn-sm" data-action="prKeep" data-id="${id}">${t('pr.keep')}</button></span>`
+        : `<span class="badge success">${ic('okCircle')}${t('pr.ok')}</span>`}</div>
+    </div>`;
+  };
+  const fake = (f, i) => { const r = S.rep[i];
+    return `<div class="fk-row"><div class="fk-imgs"><span class="thumb">${photo(PRODUCTS[f.p].img, 96)}</span>${ic('next')}<span class="thumb ${f.cls === 'fake' ? 'tint' : ''}">${photo(PRODUCTS[f.p].img, 96)}</span></div>
+      <div class="grow"><b>${esc(f.shop)}</b><span class="caption">${f.ch} · ${t(f.when)} · ${money(f.price)}</span>
+        <span class="sp-tags"><span class="badge ${f.cls === 'auth' ? 'success' : f.cls === 'fake' ? 'danger' : 'warning'}">${t('fk.' + f.cls)}</span><span class="badge outline tnum">${t('fk.sim', {n:f.sim})}</span></span></div>
+      ${f.cls === 'auth' ? `<span class="caption">${t('fk.authNote')}</span>` : r ? `<span class="badge info">${ic('check')}${t('fk.sent')}</span>`
+        : `<button class="btn btn-neutral btn-sm" data-action="prReport" data-i="${i}">${ic('alert')}${t('fk.report')}</button>`}</div>`; };
+  return `<div class="page-h"><div class="ph-t"><span class="eyebrow">${t('lab.eyebrow')} · B1 · B2 ${gemPill()}</span><h1 class="d-page">${t('nav.pricing')}</h1><p>${t('pr.sub')}</p></div>
+      <div class="dash-tools"><span class="caption">${t('pr.th')}</span><div class="segmented" id="prTh" role="group">${[5, 10, 15].map(v => `<button class="${S.th === v ? 'active' : ''}" data-action="prTh" data-v="${v}">${v}%</button>`).join('')}</div></div></div>
+    ${alerts ? `<div class="alert warning">${ic('warn')}<span>${t('pr.alert', {n:alerts, th:S.th})}</span></div>` : ''}
+    <div class="card" id="prTable"><div class="card-h"><div class="ch-t"><h3>${t('pr.tblT')}</h3><span class="caption">${t('pr.tblS')}</span></div><span class="badge info">B1</span></div>
+      <div class="pr-list">${ids.map(row).join('')}</div>
+      <span class="caption" style="display:block;margin-top:10px">${t('pr.rule')}</span></div>
+    <div class="card" id="prFake"><div class="card-h"><div class="ch-t"><h3>${t('fk.t')}</h3><span class="caption">${t('fk.s')}</span></div><span class="badge info">B2</span></div>
+      <div class="fk-list">${FAKES.map(fake).join('')}</div></div>
+    ${aiNote('pr.note')}`;
+}
+
+/* ---------- S6 · Đăng sản phẩm từ 1 ảnh (B7) ---------- */
+const AI_LIST_IMGS = ['1610701596007-11502861dcfa', '1481973946307-512988dde8b1', '1520485521983-bfaa0bc6c80e', '1616241673111-508b4662c707'];
+function pdAiHTML(d){
+  if (d._id !== 'new') return '';
+  return `<div class="ai-card pd-ai" id="pdAi"><div class="ai-h"><span class="ai-ic">${ic('spark')}</span>
+      <div class="ah-t"><b>${t('pa.t')}</b><span class="caption">${t('pa.s')}</span></div><span class="ai-label hide-m">B7</span></div>
+    ${d.ai ? `<div class="pa-done">${ic('okCircle')}<span>${t(d.aiGem ? 'pa.gemDone' : 'pa.done')}</span></div>
+      <div class="pa-ch"><span class="label">${t('pa.chT')}</span>${['shopee','tiktok','lazada'].map(k => `<div class="pa-c"><span class="badge outline">${t('pa.ch.' + k)}</span><span class="grow">${d.aiTitles && d.aiTitles[k] ? esc(d.aiTitles[k]) : t('pa.title.' + k)}</span><button class="icon-btn sm" data-action="paCopy" aria-label="Copy">${ic('copy')}</button></div>`).join('')}</div>`
+    : `<div class="btn-row"><button class="btn btn-ai btn-sm ${d.aiBusy ? 'is-loading' : ''}" data-action="pdAiGen">${ic('image')}${t('pa.btn')}</button>
+        <label class="btn btn-neutral btn-sm" for="paFile">${ic('image')}${t('pa.upload')}</label><input type="file" id="paFile" accept="image/*" hidden>${gemPill()}<span class="caption">${t('pa.hint')}</span></div>
+      ${d.aiBusy ? `<div class="pa-steps">${[1,2,3,4].map(i => `<span style="--d:${(i - 1) * .4}s">${ic('check')}${t('pa.step' + i)}</span>`).join('')}</div>` : ''}`}
+  </div>`;
+}
+function pdAiFill(){
+  const d = state.pd, vi = I18N.vi, en = I18N.en;
+  Object.assign(d, {ai:true, aiBusy:false, imgs:AI_LIST_IMGS.slice(), cat:'cups', price:46, old:0, weight:.9, fragile:true,
+    name:{vi:vi['pa.name'], en:en['pa.name']}, desc:{vi:vi['pa.desc'], en:en['pa.desc']},
+    variants:[{k:t('pa.var'), img:AI_LIST_IMGS[0], stock:20, sku:'HC-CUP-05-S'}], errs:{}});
 }
 
 
@@ -3828,7 +4527,7 @@ function ask(q, text){
 /* =========================================================
    11. AUTOPLAY — walks the whole scenario like a real user
    ========================================================= */
-const AUTO_STEPS = 16;
+const AUTO_STEPS = 20;
 const SPEEDS = {slow:1.5, normal:1, fast:.5};
 let AUTO = {on:false, paused:false, stop:false, speed:1, i:0};
 const isMobile = () => matchMedia('(max-width:767px)').matches;
@@ -3909,6 +4608,17 @@ function autoSteps(){
     async () => { await navTo('finance'); await tap('#finWdBtn', 800); await tap('[data-action="wdPct"][data-v="50"]', 700); await tap('[data-action="dxOk"]', 1300); },
     async () => { await navTo('settings'); await tap('[data-action="setTab"][data-v="return"]', 900); await tap('[data-action="setRet"][data-v="14"]', 700); await tap('#setSaveBtn', 1300);
       await navTo('dashboard'); },
+    async () => { await navTo('products'); await tap('.page-h [data-go="product/new"]', 800); await tap('[data-action="pdAiGen"]', 2800);
+      await tap('#pdAi [data-action="paCopy"]', 900); await tap('#pdSaveBtn', 1300); },
+    async () => { await navTo('studio'); await tap('[data-action="stPid"][data-v="vase"]', 700); await tap('[data-action="stGen"]', 2700);
+      await tap('[data-action="stFidAll"]', 700); await tap('[data-action="stPublish"]', 1300);
+      await tap('[data-action="stTab"][data-v="video"]', 800); await tap('[data-action="stVoice"][data-v="north"]', 600);
+      await tap('[data-action="stVidGen"]', 3600); await tap('[data-action="stAb"]', 1600); },
+    async () => { await navTo('sourcing'); await tap('#srcTrend [data-action="srcSample"][data-i="0"]', 2800);
+      await tap('.sp-list [data-action="srcPick"]:nth-child(2)', 1000); await tap('[data-action="srcQty"][data-v="1000"]', 900);
+      await tap('[data-action="srcRfq"]', 1200); await tap('[data-action="dxOk"]', 1300); },
+    async () => { await navTo('pricing'); await tap('[data-action="prApply"]', 1300); await tap('[data-action="prReport"]', 1300);
+      await tap('[data-action="dxOk"]', 1300); await navTo('dashboard'); },
   ];
 }
 function paintAutoBar(){
@@ -3924,6 +4634,7 @@ function resetDemo(){
   Object.assign(state.o, {tab:'all', q:'', pay:'all', car:'all', page:1}); state.o.sel.clear();
   Object.assign(state.pr, {tab:'all', q:'', cat:'all'}); Object.assign(state.rv, {tab:'all', topic:null, open:null, tone:'friendly'});
   Object.assign(state.msg, {open:null, filter:'all', q:''}); state.fin.tab = 'all'; state.set.tab = 'profile';
+  state.st = state.src = state.prc = null;
 }
 async function runAuto(speedKey){
   if (AUTO.on) return;
@@ -3947,7 +4658,7 @@ function openAutoSheet(){
   closePop();
   let sp = 'normal';
   dialogX({icon:'play', tone:'info', wide:true, title:t('au.title'), ok:t('au.start'), okIcon:'play', alt:t('au.manual'),
-    body:`<p>${t('au.sub', {n:AUTO_STEPS, min:3})}</p>
+    body:`<p>${t('au.sub', {n:AUTO_STEPS, min:4})}</p>
       <div class="field"><span class="label">${t('au.speed')}</span><div class="segmented seg-full" id="auSpeed">${['slow','normal','fast'].map(k => `<button type="button" class="${k === sp ? 'active' : ''}" data-action="segPick" data-v="${k}">${t('au.' + k)}</button>`).join('')}</div></div>
       <div class="au-steps">${Array.from({length:AUTO_STEPS}, (_, i) => `<span><b>${i + 1}</b>${t('au.s' + (i + 1))}</span>`).join('')}</div>`,
     onOk(root){ const k = $('#auSpeed .active', root)?.dataset.v || 'normal'; setTimeout(() => runAuto(k), 250); },
@@ -3957,7 +4668,7 @@ function openAutoSheet(){
 /* =========================================================
    9. DEMO GUIDE — screens · scenario · Phase 0 checklist
    ========================================================= */
-const BUILT_PHASE = 5;
+const BUILT_PHASE = 6;
 const SCREENS = [
   {id:'S0', route:'components', ph:0},
   {id:'S1', route:'login',     ph:1},
@@ -3972,11 +4683,15 @@ const SCREENS = [
   {id:'S9', route:'promos',    ph:5},
   {id:'S10',route:'finance',   ph:5},
   {id:'S12',route:'settings',  ph:5},
+  {id:'S13',route:'studio',    ph:6},
+  {id:'S14',route:'sourcing',  ph:6},
+  {id:'S15',route:'pricing',   ph:6},
 ];
 const FLOW = [
   {k:'f1', s:['S1','S2'], ph:1}, {k:'f2', s:['S3','S4'], ph:2}, {k:'f3', s:['S3','S4'], ph:2},
   {k:'f4', s:['S2','S5'], ph:3}, {k:'f5', s:['S6'], ph:3}, {k:'f6', s:['S7'], ph:4}, {k:'f7', s:['S11'], ph:4},
   {k:'f8', s:['S8'], ph:5}, {k:'f9', s:['S9'], ph:5}, {k:'f10', s:['S10'], ph:5}, {k:'f11', s:['S12'], ph:5},
+  {k:'f12', s:['S6','S13'], ph:6}, {k:'f13', s:['S14'], ph:6}, {k:'f14', s:['S15'], ph:6},
 ];
 /* target = element to highlight; sec = component-sheet section to scroll to */
 const CHECKS_P0 = [
@@ -4049,9 +4764,20 @@ const CHECKS_P5 = [
   {k:'setReturn',   route:'settings', pre:'setReturn', target:'#setRet'},
   {k:'setSave',     route:'settings', target:'#setSaveBtn'},
 ];
-const PHASE_CHECKS = {0:CHECKS_P0, 1:CHECKS_P1, 2:CHECKS_P2, 3:CHECKS_P3, 4:CHECKS_P4, 5:CHECKS_P5};
+const CHECKS_P6 = [
+  {k:'pAiList',  route:'product/new', target:'#pdAi'},
+  {k:'stScene',  route:'studio',   target:'#stGen'},
+  {k:'stCheck',  route:'studio',   target:'#stFid'},
+  {k:'stVideo',  route:'studio',   target:'#stTabs'},
+  {k:'srcScan',  route:'sourcing', target:'#srcTrend'},
+  {k:'srcCost',  route:'sourcing', target:'#srcCost, #srcDrop'},
+  {k:'srcRfq',   route:'sourcing', target:'#srcRfq, #srcDrop'},
+  {k:'prApply',  route:'pricing',  target:'#prTable'},
+  {k:'prFake',   route:'pricing',  target:'#prFake'},
+];
+const PHASE_CHECKS = {0:CHECKS_P0, 1:CHECKS_P1, 2:CHECKS_P2, 3:CHECKS_P3, 4:CHECKS_P4, 5:CHECKS_P5, 6:CHECKS_P6};
 const CHECKS = PHASE_CHECKS[BUILT_PHASE];
-const ALL_CHECKS = [...CHECKS_P0, ...CHECKS_P1, ...CHECKS_P2, ...CHECKS_P3, ...CHECKS_P4, ...CHECKS_P5];
+const ALL_CHECKS = [...CHECKS_P0, ...CHECKS_P1, ...CHECKS_P2, ...CHECKS_P3, ...CHECKS_P4, ...CHECKS_P5, ...CHECKS_P6];
 const done = new Set(store.get('tts_done', []));
 const guideCount = () => `${CHECKS.filter(c => done.has(c.k)).length}/${CHECKS.length}`;
 function markDone(k){
@@ -4171,6 +4897,86 @@ const ACTIONS = {
   setTab(el){ state.set.tab = el.dataset.v; state.set.ret = state.set.retSaved; renderPage(); },
   setRet(el){ state.set.ret = +el.dataset.v; $$('[data-action="setRet"]').forEach(b => b.classList.toggle('active', b === el)); },
   segPick(el){ $$('button', el.parentElement).forEach(b => b.classList.toggle('active', b === el)); },
+  stPid(el){ const S = stState(); S.pid = el.dataset.v; Object.assign(S, {gen:false, busy:false, pub:false, vGen:false, vBusy:false, ab:false, gemImgs:null, gemScript:null, gemHooks:null}); S.fid.clear(); renderPage(); },
+  stTab(el){ stState().tab = el.dataset.v; renderPage(); },
+  stGen(){
+    const S = stState(); if (S.busy) return;
+    Object.assign(S, {busy:true, gen:false, pub:false, gemImgs:null}); S.fid.clear(); renderPage();
+    const done = () => { S.busy = false; S.gen = S.fresh = true; markDone('stScene'); if (state.route === 'studio') renderPage(); S.fresh = false; };
+    if (GEM.live() && !GEM.imageOn() && !AUTO.on) gemFail({code:'image-off'});
+    if (GEM.imageOn() && !AUTO.on) return void studioGem(S).catch(gemFail).finally(done);
+    setTimeout(done, 1800 * (AUTO.on ? AUTO.speed : 1));
+  },
+  stFid(el){ const S = stState(); el.checked ? S.fid.add(el.dataset.v) : S.fid.delete(el.dataset.v); if (S.fid.size === FID.length) markDone('stCheck'); renderPage(); },
+  stFidAll(){ const S = stState(); FID.forEach(k => S.fid.add(k)); markDone('stCheck'); renderPage(); },
+  stLabel(){ const S = stState(); S.label = !S.label; renderPage(); },
+  stPublish(){
+    const S = stState(); S.pub = true; markDone('stCheck');
+    notify({title:t('n.stPub', {p:esc(t('p.' + S.pid))}), msg:t(S.label ? 'n.stPubL' : 'n.stPubN')}); renderPage();
+  },
+  stVoice(el){ stState().voice = el.dataset.v; renderPage(); },
+  stVLabel(){ const S = stState(); S.vLabel = !S.vLabel; renderPage(); },
+  stVidGen(){
+    const S = stState(); if (S.vBusy) return;
+    Object.assign(S, {vBusy:true, ab:false, gemScript:null, gemHooks:null}); renderPage();
+    const done = () => { S.vBusy = false; S.vGen = true; markDone('stVideo'); if (state.route === 'studio') renderPage(); };
+    if (GEM.live() && !AUTO.on) return void videoGem(S).catch(gemFail).finally(done);
+    setTimeout(done, 2400 * (AUTO.on ? AUTO.speed : 1));
+  },
+  stAb(){ stState().ab = true; renderPage(); },
+  stExport(el){ notify({title:t(el.dataset.v === 'dl' ? 'n.stDl' : 'n.stExp')}); },
+  srcSample(el){ srcScan(+el.dataset.i); },
+  srcPick(el){ srcState().pick = +el.dataset.i; markDone('srcCost'); renderPage(); },
+  srcQty(el){ srcState().qty = +el.dataset.v; markDone('srcCost'); renderPage(); },
+  async srcRfq(el){
+    const S = srcState(), rows = srcRows(S.q).slice(0, 3), Q = SRC_Q[S.q];
+    let draft = null;
+    if (GEM.live() && !AUTO.on){
+      el.classList.add('is-loading');
+      try { draft = await rfqGem(S); } catch(e){ gemFail(e); }
+      el.classList.remove('is-loading');
+    }
+    dialogX({icon:'spark', tone:'info', wide:true, title:t('src.rfqDlgT'), ok:t('src.rfqSend'), okIcon:'send',
+      body:`<p>${t('src.rfqDlgS')}</p><div class="dlg-chips">${rows.map(r => `<span class="badge outline">${r.n}</span>`).join('')}</div>
+        <div class="rfq-msg">${draft ? `<span class="zh">${esc(draft.zh)}</span>\n\n${esc(draft.tr)}\n${gemPill()}` : `<span class="zh">${t('src.rfqZh', {q:num(S.qty)})}</span>\n\n${esc(t('src.rfqVi', {q:num(S.qty), p:t(Q.k)}))}`}</div>`,
+      onOk(){ S.rfq = true; markDone('srcRfq'); notify({title:t('n.rfq'), msg:t('n.rfqSub')}); renderPage(); }});
+  },
+  prTh(el){ prState().th = +el.dataset.v; refreshChrome(); renderPage(); },
+  prApply(el){
+    const id = el.dataset.id, sg = suggestPrice(id);
+    PRODUCTS[id].price = sg.s; saveProducts(); prState().done[id] = 'apply'; markDone('prApply');
+    notify({title:t('n.saved'), msg:t('n.price', {v:money(sg.s)})}); refreshChrome(); renderPage();
+  },
+  prKeep(el){ prState().done[el.dataset.id] = 'keep'; markDone('prApply'); refreshChrome(); renderPage(); },
+  prReport(el){
+    const i = +el.dataset.i, f = FAKES[i], P = PRODUCTS[f.p];
+    dialogX({icon:'alert', tone:'warning', wide:true, title:t('fk.dlgT', {s:esc(f.shop)}), ok:t('fk.send'), okIcon:'send',
+      body:`<p>${t('fk.dlgS')}</p><div class="fk-ev"><div><span class="thumb">${photo(P.img, 240)}</span><b>${t('fk.orig')}</b><span class="caption">${t('fk.origM')}</span></div>
+        <div><span class="thumb ${f.cls === 'fake' ? 'tint' : ''}">${photo(P.img, 240)}</span><b>${t('fk.copy')}</b><span class="caption">${f.ch} · ${t(f.when)} · ${t('fk.sim', {n:f.sim})}</span></div></div>
+        <ul class="how">${[1,2,3].map(k => `<li>${t('fk.ev' + k)}</li>`).join('')}</ul>`,
+      onOk(){ prState().rep[i] = true; markDone('prFake'); notify({title:t('n.fkSent'), msg:t('n.fkSentSub', {ch:f.ch})}); renderPage(); }});
+  },
+  pdAiGen(){
+    const d = state.pd; if (!d || d.aiBusy) return;
+    if (GEM.live() && !AUTO.on) return void pdAiGem(unsplash(AI_LIST_IMGS[0], 900));
+    d.aiBusy = true; pdRerender();
+    setTimeout(() => { if (state.pd !== d) return; pdAiFill(); markDone('pAiList'); pdRerender(); notify({type:'info', title:t('n.paDone'), msg:t('n.paDoneSub')}); }, 1900 * (AUTO.on ? AUTO.speed : 1));
+  },
+  paCopy(){ notify({type:'info', title:t('n.copied')}); },
+  gemOpen(){ closePop(); openGem(); },
+  gemProv(el){
+    const box = el.closest('.sheet, .dialog') || document;
+    $$('#gemProv button', box).forEach(b => b.classList.toggle('active', b === el));
+    $$('.gem-prov', box).forEach(s => { s.hidden = s.dataset.p !== el.dataset.k; });
+  },
+
+  gemTest(el){
+    const c = readGemForm($('#overlays').lastElementChild || document); GEM.save(c);
+    if (!GEM.live()) return notify({type:'error', title:t('gem.noKey')});
+    el.classList.add('is-loading');
+    GEM.gen('text', [{text:'Reply with the single word OK.'}]).then(() => notify({title:t('gem.okT'), msg:t('gem.okS', {m:esc(GEM.isOR(c) ? c.orText : c.text)})}))
+      .catch(e => e.code ? gemFail(e) : notify({type:'error', title:t('gem.errT'), msg:esc(String(e.message || e).slice(0, 180)), ms:6000})).finally(() => el.classList.remove('is-loading'));
+  },
   setSave(el){
     el.classList.add('is-loading');
     setTimeout(() => {
@@ -4303,7 +5109,21 @@ document.addEventListener('click', e => {
   if (el.dataset.go && el.closest('#todo')) markDone('todo');
   if (el.dataset.go && !el.dataset.action){ closePop(); if ($('#overlays').children.length) closeOverlay(); if (state.cop && matchMedia('(max-width:1279px)').matches) setCop(false); go(el.dataset.go); return; }
   const fn = ACTIONS[el.dataset.action];
-  if (fn){ e.preventDefault(); fn(el); }
+  if (fn){ e.preventDefault(); const r = fn(el); if (r && r.catch) r.catch(err => console.warn(err)); }
+});
+document.addEventListener('change', async e => {
+  if (e.target.id !== 'paFile' || !state.pd) return;
+  const f = e.target.files && e.target.files[0]; if (!f || !/^image\//.test(f.type)) return;
+  const url = URL.createObjectURL(f);
+  if (GEM.live()) return pdAiGem(url);
+  const d = state.pd; d.aiBusy = true; pdRerender();
+  const part = await GEM.img(url, 900).catch(() => null);
+  setTimeout(() => { if (state.pd !== d) return; pdAiFill(); if (part) d.imgs[0] = d.variants[0].img = 'data:image/jpeg;base64,' + part.inlineData.data; markDone('pAiList'); pdRerender(); }, 1200);
+});
+document.addEventListener('change', e => {
+  if (e.target.id !== 'srcFile') return;
+  const f = e.target.files && e.target.files[0]; if (!f || !/^image\//.test(f.type)) return;
+  srcScan(hsh(f.name) % SRC_Q.length, URL.createObjectURL(f));
 });
 document.addEventListener('change', e => {
   const vf = e.target.closest('input[type=radio][data-vf], input[type=date][data-vf]');
@@ -4321,7 +5141,8 @@ document.addEventListener('submit', e => {
   e.preventDefault();
   const inp = $('#askIn'), q = inp.value.trim(); if (!q) return;
   const low = q.toLowerCase();
-  markDone('copFree'); inp.value = ''; ask(matchQ(low), q);
+  markDone('copFree'); inp.value = ''; const m = matchQ(low);
+  if (m === 'x' && GEM.live()) askGem(q); else ask(m, q);
 });
 document.addEventListener('keydown', e => {
   if (AUTO.on && e.isTrusted){ if (e.key === 'Escape') ACTIONS.autoExit(); if (e.key === ' ') { e.preventDefault(); ACTIONS.autoPause(); } return; }
@@ -4361,6 +5182,7 @@ window.addEventListener('resize', () => { if (innerWidth !== lastW){ lastW = inn
   const h = (location.hash || '').slice(1);
   if (h && (h === 'components' || h.startsWith('order/') || PAGES.some(p => p.id === h))){ if (state.authed) state.route = h; else state.after = h; }
   renderShell();
+  GEM.probe().then(() => { if ((GEM.proxy || GEM.orProxy) && state.authed) renderShell(); });
   if (!store.get('tts_guide_seen', false)){ store.set('tts_guide_seen', true); setTimeout(openGuide, 400); }
 })();
 </script>
